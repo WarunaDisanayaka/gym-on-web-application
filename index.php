@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
   <!-- Title -->
-   <title>Homepage 3</title>
+   <title>Home</title>
   <!-- Bootstrap -->
 
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
