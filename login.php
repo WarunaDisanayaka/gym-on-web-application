@@ -1,3 +1,65 @@
+<?php
+
+
+include '../../config/db.php'; // Include your db connection script
+// Initialize variables and error messages
+$name = $email = $password = "";
+$nameErr = $emailErr = $passwordErr = "";
+$successMessage = "";
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+  // Collect input data and sanitize
+  $name = trim($_POST['name']);
+  $email = trim($_POST['email']);
+  $password = trim($_POST['password']);
+  $role = 'user'; // Default role
+
+  // Validate Name
+  if (empty($name)) {
+    $nameErr = "Name is required.";
+  } elseif (!preg_match("/^[a-zA-Z\s]+$/", $name)) {
+    $nameErr = "Name can only contain letters and spaces.";
+  }
+
+  // Validate Email
+  if (empty($email)) {
+    $emailErr = "Email is required.";
+  } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $emailErr = "Invalid email format.";
+  }
+
+  // Validate Password
+  if (empty($password)) {
+    $passwordErr = "Password is required.";
+  } elseif (strlen($password) < 6) {
+    $passwordErr = "Password must be at least 6 characters long.";
+  }
+
+  // If there are no errors, proceed with account creation
+  if (empty($nameErr) && empty($emailErr) && empty($passwordErr)) {
+    // Hash the password
+    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+    // Prepare SQL to insert data
+    $sql = "INSERT INTO users (name, email, password, role) VALUES ('$name', '$email', '$hashedPassword', '$role')";
+
+    // Execute query
+    if (mysqli_query($conn, $sql)) {
+      $successMessage = "Account created successfully!";
+      // Clear input fields
+      $name = $email = $password = "";
+    } else {
+      $successMessage = "Error: " . mysqli_error($conn);
+    }
+
+    // Close the connection
+    mysqli_close($conn);
+  }
+}
+
+?>
+
 <!DOCTYPE html> 
 <html lang="en"> 
 
@@ -25,6 +87,11 @@
   <link rel="stylesheet" type="text/css" href="assets/css/style-dark.css"> 
   <!-- Responsive -->
   <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
+  <style>
+        .error { color: red; font-size: 0.9em; }
+        .success { color: green; font-size: 1em; }
+    </style>
  
 </head>
  
@@ -113,10 +180,18 @@
         <div class="col-lg-6">
           <div class="box register">
              <h3>register your account</h3>
-            <form>
-              <input type="text" name="text" placeholder="Complete Name">
-              <input type="email" name="email" placeholder="Username or email address">
-              <input type="password" name="password" placeholder="Password">
+             <form action="login.php" method="POST">
+             <input type="text" name="name" placeholder="Complete Name" value="<?php echo htmlspecialchars($name); ?>">
+    <span class="error"><?php echo $nameErr; ?></span>
+    <br>
+
+    <input type="email" name="email" placeholder="Username or email address" value="<?php echo htmlspecialchars($email); ?>">
+    <span class="error"><?php echo $emailErr; ?></span>
+    <br>
+
+    <input type="password" name="password" placeholder="Password" value="<?php echo htmlspecialchars($password); ?>">
+    <span class="error"><?php echo $passwordErr; ?></span>
+    <br>
               <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.</p>
               <button type="submit" class="theme-btn"> Register</button>
             </form>
