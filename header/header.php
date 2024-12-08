@@ -38,7 +38,7 @@
                           <li><a href="checkout.php">Cart Checkout</a></li>
                         </ul>
                       </li>
-                      <li class="menu-item-has-children"><a href="JavaScript:void(0)">Pages</a>
+                      <!-- <li class="menu-item-has-children"><a href="JavaScript:void(0)">Pages</a>
                         <ul class="sub-menu">
                           <li class="menu-item-has-children">
                             <a href="javascript:void(0)">Services</a>
@@ -65,7 +65,7 @@
                           </li>
                           <li><a href="login.php">Login & Register</a></li>
                         </ul>
-                      </li>
+                      </li> -->
                       <li class="menu-item-has-children">
                         <a href="javascript:void(0)">News</a>
                         <ul class="sub-menu">
@@ -76,6 +76,9 @@
                       </li>
                       <li>
                         <a href="contact.php">Contact</a>
+                      </li>
+                      <li>
+                        <a href="services.php">Work Out Plans</a>
                       </li>
                     </ul>
                     
