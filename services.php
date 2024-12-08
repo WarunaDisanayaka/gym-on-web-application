@@ -75,7 +75,7 @@
         <div class="row">
           <ul>
             <li>
-              <a href="index.html">
+              <a href="index.php">
                 <i class="fa-solid fa-house"></i>
                 <p>Home</p>
               </a>
@@ -97,9 +97,9 @@
         <div class="col-lg-4 col-md-6" >
           <div class="service-data"> 
             <i class="flaticon-gym-equipment"></i> 
-            <h3><a href="service-detail.html">exercise cycle</a></h3>
+            <h3><a href="service-detail.php">exercise cycle</a></h3>
             <p>Lorem ipsum dolor sit amet, consectne auctor aliquet. Aenean sollicitudi bibendum auctor.</p>
-            <a class="icon" href="service-detail.html">
+            <a class="icon" href="service-detail.php">
               <i class="fa-solid fa-angles-right"></i>
             </a> 
           </div>
@@ -107,9 +107,9 @@
         <div class="col-lg-4 col-md-6" >
           <div class="service-data">
             <i class="flaticon-gym"></i>
-            <h3><a href="service-detail.html">Expert Trainers</a></h3>
+            <h3><a href="service-detail.php">Expert Trainers</a></h3>
             <p>Lorem ipsum dolor sit amet, consectne auctor aliquet. Aenean sollicitudi bibendum auctor.</p>
-            <a class="icon" href="service-detail.html">
+            <a class="icon" href="service-detail.php">
               <i class="fa-solid fa-angles-right"></i>
             </a>
           </div>
@@ -117,9 +117,9 @@
         <div class="col-lg-4 col-md-6" >
           <div class="service-data mb-0">
             <i class="flaticon-work-from-home"></i>
-            <h3><a href="service-detail.html">Workout Schedule</a></h3>
+            <h3><a href="service-detail.php">Workout Schedule</a></h3>
             <p>Lorem ipsum dolor sit amet, consectne auctor aliquet. Aenean sollicitudi bibendum auctor.</p>
-            <a class="icon" href="service-detail.html">
+            <a class="icon" href="service-detail.php">
               <i class="fa-solid fa-angles-right"></i>
             </a>
           </div>
@@ -260,11 +260,11 @@
       <div class="row g-0">
         <div class="col-lg-4 col-md-6 col-sm-12" >
           <div class="service-two-box" style="background-image: url(assets/images/service-1.jpg);">
-            <h3><a href="service-detail.html">best equipment</a></h3>
+            <h3><a href="service-detail.php">best equipment</a></h3>
             <p>Designing and Building The Most Beautiful Custom Homes.</p>
             <i class="flaticon flaticon-fitness"></i>
             <div class="service-two-icon d-flex-all justify-content-start">
-              <a href="service-detail.html">
+              <a href="service-detail.php">
               <i class="fa-solid fa-arrow-up-long"></i>
               </a>
             </div>
@@ -275,11 +275,11 @@
         </div> 
         <div class="col-lg-4 col-md-6 col-sm-12" >
           <div class="service-two-box" style="background-image: url(assets/images/service-2.jpg);">
-            <h3><a href="service-detail.html">expert trainers</a></h3>
+            <h3><a href="service-detail.php">expert trainers</a></h3>
             <p>Designing and Building The Most Beautiful Custom Homes.</p>
             <i class="flaticon-muscle-1 flaticon"></i> 
             <div class="service-two-icon d-flex-all justify-content-start">
-              <a href="service-detail.html">
+              <a href="service-detail.php">
               <i class="fa-solid fa-arrow-up-long"></i>
               </a>
             </div>
@@ -290,11 +290,11 @@
         </div> 
         <div class="col-lg-4 col-md-6 col-sm-12" >
           <div class="service-two-box" style="background-image: url(assets/images/service-3.jpg);">
-            <h3><a href="service-detail.html">group training</a></h3>
+            <h3><a href="service-detail.php">group training</a></h3>
             <p>Designing and Building The Most Beautiful Custom Homes.</p>
             <i class="flaticon flaticon-jump-rope"></i>
             <div class="service-two-icon d-flex-all justify-content-start">
-              <a href="service-detail.html">
+              <a href="service-detail.php">
               <i class="fa-solid fa-arrow-up-long"></i>
               </a>
             </div>
@@ -305,11 +305,11 @@
         </div> 
         <div class="col-lg-4 col-md-6 col-sm-12" >
           <div class="service-two-box" style="background-image: url(assets/images/service-4.jpg);">
-            <h3><a href="service-detail.html">diet nutrition</a></h3>
+            <h3><a href="service-detail.php">diet nutrition</a></h3>
             <p>Designing and Building The Most Beautiful Custom Homes.</p>
             <i class="flaticon flaticon-weight-loss"></i>
             <div class="service-two-icon d-flex-all justify-content-start">
-              <a href="service-detail.html">
+              <a href="service-detail.php">
               <i class="fa-solid fa-arrow-up-long"></i>
               </a>
             </div>
@@ -320,11 +320,11 @@
         </div> 
         <div class="col-lg-4 col-md-6 col-sm-12" >
           <div class="service-two-box" style="background-image: url(assets/images/service-5.jpg);">
-            <h3><a href="service-detail.html">workout classes</a></h3>
+            <h3><a href="service-detail.php">workout classes</a></h3>
             <p>Designing and Building The Most Beautiful Custom Homes.</p>
             <i class="flaticon flaticon-exercise"></i>
             <div class="service-two-icon d-flex-all justify-content-start">
-              <a href="service-detail.html">
+              <a href="service-detail.php">
               <i class="fa-solid fa-arrow-up-long"></i>
               </a>
             </div>
@@ -335,11 +335,11 @@
         </div> 
         <div class="col-lg-4 col-md-6 col-sm-12" >
           <div class="service-two-box" style="background-image: url(assets/images/service-6.jpg);">
-            <h3><a href="service-detail.html">yoga relaxation</a></h3>
+            <h3><a href="service-detail.php">yoga relaxation</a></h3>
             <p>Designing and Building The Most Beautiful Custom Homes.</p>
             <i class="flaticon flaticon-lotus-position"></i>
             <div class="service-two-icon d-flex-all justify-content-start">
-              <a href="service-detail.html">
+              <a href="service-detail.php">
               <i class="fa-solid fa-arrow-up-long"></i>
               </a>
             </div>
@@ -361,7 +361,7 @@
           <div class="cta-data">
             <h2>Let's Start Workout!</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor incididunt ut labore et .</p>
-            <a href="our-projects-2.html" class="theme-btn">Build a Project </a>
+            <a href="our-projects-2.php" class="theme-btn">Build a Project </a>
           </div>
         </div>
         <div class="col-lg-5" >
@@ -383,7 +383,7 @@
         <div class="row">
           <div class="footer-first">
             <div class="footer-logo">
-              <a href="index.html">
+              <a href="index.php">
                 <img src="assets/images/logo-2.svg" alt="Footer Logo">
               </a>
             </div>
@@ -401,7 +401,7 @@
               </div>
               <p>expert trainers <span>+1 (251) 344 0 66</span> free call !</p>
             </div>
-            <a href="contact.html" class="theme-btn">Get a Consultation </a>
+            <a href="contact.php" class="theme-btn">Get a Consultation </a>
           </div>
         </div>
       </div>
@@ -524,7 +524,7 @@
             <div class="contact-form-one popup">
               <div class="c-form-2">
                 <h3>Start Consulting</h3>
-                <div class="parallax" style="background-image: url(assets/images/pattren.html);"></div>
+                <div class="parallax" style="background-image: url(assets/images/pattren.php);"></div>
                 <form>
                   <div class="row g-0">
                     <input type="text" class="form-control" id="exampleInputText1"  placeholder="Complete Name">
