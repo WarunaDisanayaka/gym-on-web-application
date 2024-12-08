@@ -122,15 +122,7 @@
           <figure><img alt="girl" src="assets/images/project-img-4.jpg"></figure>
       </li> 
     </ul>
-    <div class="footer-p-3 rights">
-      <div class="container">
-        <div class="row">
-          <div class="footer-col">
-            <p>gym on fitness Center<i class="fa-solid fa-heart"></i> © 2024 <a href="https://winsfolio.net/"> winsfolio.net</a> All rights reserved</p> 
-          </div>
-        </div>
-      </div>
-    </div>
+    
   </footer>
 
   <div class="modal fade popups conslt-popup" id="exampleModal" tabindex="-1" aria-hidden="true">
