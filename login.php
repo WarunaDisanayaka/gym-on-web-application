@@ -64,6 +64,60 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["register"])) {
   }
 }
 
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["login"])) {
+
+  print_r($_POST["login"]);
+
+  $loginEmailErr = $loginPasswordErr = ""; // Initialize error variables
+  $errorMessage = $successMessage = "";   // Other messages
+
+  // Collect and sanitize input data
+  $loginEmail = trim($_POST['loginEmail']);
+  $loginPassword = trim($_POST['loginPassword']);
+
+  // Validate Email
+  if (empty($loginEmail)) {
+    $loginEmailErr = "Email is required.";
+  } elseif (!filter_var($loginEmail, FILTER_VALIDATE_EMAIL)) {
+    $loginEmailErr = "Invalid email format.";
+  }
+
+  // Validate Password
+  if (empty($loginPassword)) {
+    $loginPasswordErr = "Password is required.";
+  }
+
+  // If there are no errors, proceed with login
+  if (empty($loginEmailErr) && empty($loginPasswordErr)) {
+    // Prepare SQL to check user existence
+    $sql = "SELECT * FROM users WHERE email = '$loginEmail'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+      $user = mysqli_fetch_assoc($result);
+      // Verify the password
+      if (password_verify($loginPassword, $user['password'])) {
+        $successMessage = "Login successful! Welcome, " . htmlspecialchars($user['name']) . ".";
+        // You can set a session or redirect the user to a dashboard here
+        session_start();
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['user_name'] = $user['name'];
+        $_SESSION['user_role'] = $user['role'];
+        header("Location: dashboard/");
+        exit();
+      } else {
+        $errorMessage = "Invalid password. Please try again.";
+      }
+    } else {
+      $errorMessage = "No account found with this email.";
+    }
+  }
+
+  // Close the connection
+  mysqli_close($conn);
+}
+
 ?>
 
 <!DOCTYPE html> 
@@ -168,20 +222,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["register"])) {
         <div class="col-lg-6" >
           <div class="box login">
             <h3>LogIn Your Account</h3>
-            <form>
-              <input type="email" name="email" placeholder="Username or email address">
-              <input type="password" name="password" placeholder="Password">
-              <div class="remember">
-                <div class="first">
-                  <input type="checkbox" name="checkbox" id="checkbox">
-                  <label for="checkbox">Remember me</label>
-                </div>
-                <div class="second">
-                  <a href="javascript:void(0)">Forget a Password?</a>
-                </div>
-              </div>
-              <button type="submit" class="theme-btn"> Login</button>
-            </form>
+            <form action="login.php" method="POST">
+    <input type="email" name="loginEmail" placeholder="Username or email address">
+    <span style="color: red;"><?php echo $loginEmailErr; ?></span>
+    <input type="password" name="loginPassword" placeholder="Password">
+    <span style="color: red;"><?php echo $loginPasswordErr; ?></span>
+    <?php if (!empty($errorMessage)) { ?>
+                                                                       <p class="success" style="color:red;"><?php echo $errorMessage; ?></p>
+               <?php } ?>
+    <div class="remember">
+      <div class="first">
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <label for="checkbox">Remember me</label>
+      </div>
+      <div class="second">
+        <a href="javascript:void(0)">Forget a Password?</a>
+      </div>
+    </div>
+    <button type="submit" name="login" class="theme-btn">Login</button>
+  </form>
           </div>
         </div>
         <div class="col-lg-6">
@@ -200,7 +259,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["register"])) {
     <span class="error"><?php echo $passwordErr; ?></span>
 
     <?php if (!empty($successMessage)) { ?>
-                         <p class="success" style="color:green;"><?php echo $successMessage; ?></p>
+                                                                       <p class="success" style="color:green;"><?php echo $successMessage; ?></p>
                <?php } ?>
     <br>
               <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.</p>
