@@ -111,7 +111,7 @@
                         ✔ Monthly progress tracking and performance analysis<br>
                         ✔ Priority access to fitness workshops and classes
                      </p>
-                     <a href="checkout.php" class="theme-btn">Buy Now </a>
+                     <a href="checkout.php?package=Beginner&price=69" class="theme-btn">Buy Now</a>
                   </div>
                </div>
                <div class="col-lg-4 col-md-6" >
@@ -127,7 +127,7 @@
                         ✔ Detailed progress reports with performance metrics<br>
                         ✔ Exclusive access to VIP fitness events and seminars
                      </p>
-                     <a href="checkout.php" class="theme-btn">Buy Now </a>
+                     <a href="checkout.php?package=Beginner&price=99" class="theme-btn">Buy Now</a>
                   </div>
                </div>
             </div>
