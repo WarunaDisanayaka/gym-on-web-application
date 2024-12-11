@@ -1,3 +1,11 @@
+<?php
+$package = $_GET['package'] ?? 'Unknown';
+$price = $_GET['price'] ?? '0';
+
+// Example usage
+echo "You selected the $package package for $$price.";
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -184,22 +192,22 @@
                    <div class="final">
                     <h4>Cart Total</h4>
                     <ul>
-                      <li>
-                        <span>Subtotal:</span>
-                        <span>$358.00</span>
-                      </li>
+                    <li>
+                <span>Package:</span>
+                <span><?php echo htmlspecialchars($package); ?></span>
+            </li>
                       <li>
                         <span>Shipping:</span>
-                        <span>$358.00</span>
+                        <span>$0.00</span>
                       </li>
                     </ul>
                   </div>
                   <div class="total">
                     <ul>
-                      <li>
-                        <span>Total:</span>
-                        <span>$358.00</span>
-                      </li>
+                    <li>
+                <span>Subtotal:</span>
+                <span>$<?php echo htmlspecialchars($price); ?></span>
+            </li>
                     </ul>
                   </div>
                 </div>
