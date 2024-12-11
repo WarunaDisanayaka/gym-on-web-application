@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["login"])) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['user_name'] = $user['name'];
         $_SESSION['user_role'] = $user['role'];
-        header("Location: dashboard/");
+        header("Location: /");
         exit();
       } else {
         $errorMessage = "Invalid password. Please try again.";
@@ -228,7 +228,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["login"])) {
     <input type="password" name="loginPassword" placeholder="Password">
     <span style="color: red;"><?php echo $loginPasswordErr; ?></span>
     <?php if (!empty($errorMessage)) { ?>
-                                                                       <p class="success" style="color:red;"><?php echo $errorMessage; ?></p>
+                                                                         <p class="success" style="color:red;"><?php echo $errorMessage; ?></p>
                <?php } ?>
     <div class="remember">
       <div class="first">
@@ -259,7 +259,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["login"])) {
     <span class="error"><?php echo $passwordErr; ?></span>
 
     <?php if (!empty($successMessage)) { ?>
-                                                                       <p class="success" style="color:green;"><?php echo $successMessage; ?></p>
+                                                                         <p class="success" style="color:green;"><?php echo $successMessage; ?></p>
                <?php } ?>
     <br>
               <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.</p>
