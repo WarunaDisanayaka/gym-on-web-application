@@ -1,3 +1,20 @@
+<?php
+// Start the session
+session_start();
+
+// Get the current page
+$current_page = basename($_SERVER['PHP_SELF']);
+
+// Check if the current page is checkout.php
+if ($current_page === 'checkout.php') {
+  // Verify if the user is logged in
+  if (!isset($_SESSION['user'])) {
+    // If not logged in, redirect to the login page
+    header("Location: login.php");
+    exit();
+  }
+}
+?>
 <header class="header-style-one" >
     <div class="container">
       <div class="row">
