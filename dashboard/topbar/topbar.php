@@ -1,3 +1,15 @@
+<?php
+// Start the session
+session_start();
+
+// Verify if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+  // If not logged in, redirect to the login page
+  header("Location: ../login.php");
+  exit();
+}
+
+?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
         <button
