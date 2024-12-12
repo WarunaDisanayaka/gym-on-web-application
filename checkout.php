@@ -3,7 +3,7 @@ $package = $_GET['package'] ?? 'Unknown';
 $price = $_GET['price'] ?? '0';
 
 // Example usage
-echo "You selected the $package package for $$price.";
+// echo "You selected the $package package for $$price.";
 ?>
 
 <!DOCTYPE html>
