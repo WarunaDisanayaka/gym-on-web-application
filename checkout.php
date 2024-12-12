@@ -100,7 +100,8 @@ echo "You selected the $package package for $$price.";
 
   <!-- Cart Start -->
   <section class="gap checkout detail-page">
-    <form>
+    <form action="process-payment.php" method="POST" id="payment-form">
+      
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -163,20 +164,7 @@ echo "You selected the $package package for $$price.";
                         <input type="text" name="text" placeholder="Address">
                       </div>
                     </div>
-                    <div class="row checkk g-0">
-                      <div class="form-group col-md-12">
-                        <div class="custom-control custom-radio">
-                          <input checked type="checkbox" id="customRadio11" name="customRadio" class="custom-control-input">
-                          <label class="custom-control-label" for="customRadio11">A+ Grey Structure</label>
-                        </div>
-                      </div>
-                      <div class="form-group col-md-12">
-                        <div class="custom-control custom-radio">
-                          <input type="checkbox" id="customRadio2" name="customRadio" class="custom-control-input">
-                          <label class="custom-control-label" for="customRadio2">Premium Finishing</label>
-                        </div>
-                      </div>
-                    </div>
+                    
                 </div>
               </div>
               <div class="col-lg-4 col-md-12">
@@ -206,14 +194,16 @@ echo "You selected the $package package for $$price.";
                     <ul>
                     <li>
                 <span>Subtotal:</span>
-                <span>$<?php echo htmlspecialchars($price); ?></span>
+                <span id="amount">$<?php echo htmlspecialchars($price); ?></span>
+                <input type="hidden" name="amount" value="<?php echo htmlspecialchars($price); ?>">
+
             </li>
                     </ul>
                   </div>
                 </div>
                 <div class="payment-method">
                   <h3>Payment Method</h3>
-                    <div class="row checkk g-0">
+                    <!-- <div class="row checkk g-0">
                       <div class="form-group col-md-12">
                         <div class="custom-control custom-radio">
                           <input checked type="checkbox" id="customRadio1" name="customRadio" class="custom-control-input">
@@ -234,9 +224,13 @@ echo "You selected the $package package for $$price.";
                           </label>
                         </div>
                       </div>
+                    </div> -->
+                    <div id="card-element">
+                          <!-- A Stripe Element will be inserted here. -->
                     </div>
                   <button type="submit" class="theme-btn">Place Order</button>
                 </div>
+
               </div>
             </div>
           </div>
@@ -293,6 +287,73 @@ echo "You selected the $package package for $$price.";
     </div>
   <!-- Footer Style One End -->
  <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
+
+ <script src="https://js.stripe.com/v3/"></script>
+<script>
+  // Create a Stripe client
+var stripe = Stripe('pk_test_63t8nT9v0tVZoAnVDON58Btf'); // Replace with your Publishable Key
+
+// Create an instance of Elements
+var elements = stripe.elements();
+
+// Custom styling for the card Element
+var style = {
+    base: {
+        color: 'white', // Set text color to white
+        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+        fontSize: '16px',
+        '::placeholder': {
+            color: '#b3b3b3', // Placeholder text color
+        },
+    },
+    invalid: {
+        color: '#fa755a', // Text color for invalid inputs
+        iconColor: '#fa755a', // Icon color for invalid inputs
+    },
+};
+
+// Create an instance of the card Element with the custom style
+var card = elements.create('card', { style: style });
+
+// Add an instance of the card Element into the `card-element` <div>
+card.mount('#card-element');
+
+// Handle real-time validation errors from the card Element
+card.addEventListener('change', function (event) {
+    var displayError = document.getElementById('card-errors');
+    if (event.error) {
+        displayError.textContent = event.error.message;
+    } else {
+        displayError.textContent = '';
+    }
+});
+
+// Handle form submission
+var form = document.getElementById('payment-form');
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    stripe.createToken(card).then(function (result) {
+        if (result.error) {
+            // Inform the user if there was an error
+            var errorElement = document.getElementById('card-errors');
+            errorElement.textContent = result.error.message;
+        } else {
+            // Send the token to your server
+            var hiddenInput = document.createElement('input');
+            hiddenInput.setAttribute('type', 'hidden');
+            hiddenInput.setAttribute('name', 'stripeToken');
+            hiddenInput.setAttribute('value', result.token.id);
+            form.appendChild(hiddenInput);
+
+            // Submit the form
+            form.submit();
+        }
+    });
+});
+
+  
+</script>
 
   <!-- Jquery -->
 
