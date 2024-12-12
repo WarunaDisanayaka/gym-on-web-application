@@ -9,7 +9,7 @@
               </div>
             </li>
             <li>
-              <a href="#" class="nav-link px-3 active">
+              <a href="../dashboard/index.php" class="nav-link px-3 active">
                 <span class="me-2"><i class="bi bi-speedometer2"></i></span>
                 <span>Dashboard</span>
               </a>
@@ -37,7 +37,7 @@
               <div class="collapse" id="layouts">
                 <ul class="navbar-nav ps-3">
                   <li>
-                    <a href="#" class="nav-link px-3">
+                    <a href="" class="nav-link px-3">
                       <span class="me-2"
                         ><i class="bi bi-speedometer2"></i
                       ></span>
