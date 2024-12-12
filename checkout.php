@@ -124,33 +124,7 @@ echo "You selected the $package package for $$price.";
                         <input type="text" name="text" placeholder="Company Name">
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="form-group col-md-12">
-                        <select id="inputState-1" class="form-control">
-                          <option selected>Country</option>
-                          <option>Pakistan</option>
-                          <option>Turkish</option>
-                          <option>America</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row dist">
-                      <div class="form-group col-md-6">
-                        <select id="inputState-2" class="form-control">
-                          <option selected>City</option>
-                          <option>Multan</option>
-                          <option>Islamabad</option>
-                          <option>Lahore</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-md-6">
-                        <select id="inputState-3" class="form-control">
-                          <option selected>State / Province</option>
-                          <option>Punjab</option>
-                          <option>Sindh</option>
-                        </select>
-                      </div>
-                    </div>
+                    
                     <div class="row dist">
                       <div class="col-md-6">
                         <input type="number" name="number" placeholder="Postal Code">
