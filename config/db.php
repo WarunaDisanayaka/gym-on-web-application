@@ -4,7 +4,7 @@
 // Database credentials
 $servername = "localhost:3306";
 $username = "root";
-$password = "";
+$password = "waruna@99";
 $dbname = "gym_on";
 
 // Create a connection

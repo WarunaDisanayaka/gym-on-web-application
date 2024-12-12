@@ -50,25 +50,20 @@
             <li>
               <a href="#" class="nav-link px-3">
                 <span class="me-2"><i class="bi bi-book-fill"></i></span>
-                <span>Pages</span>
+                <span>My Workout Plans</span>
               </a>
             </li>
-            <li class="my-4"><hr class="dropdown-divider bg-light" /></li>
-            <li>
-              <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
-                Addons
-              </div>
-            </li>
+            
             <li>
               <a href="#" class="nav-link px-3">
-                <span class="me-2"><i class="bi bi-graph-up"></i></span>
-                <span>Charts</span>
+              <span class="me-2"><i class="bi bi-cup-straw"></i></span>
+                <span>Nutrition</span>
               </a>
             </li>
             <li>
               <a href="#" class="nav-link px-3">
-                <span class="me-2"><i class="bi bi-table"></i></span>
-                <span>Tables</span>
+              <span class="me-2"><i class="bi bi-hourglass-split"></i></span>
+                <span>Progress</span>
               </a>
             </li>
           </ul>
