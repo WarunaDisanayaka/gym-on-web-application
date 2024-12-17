@@ -66,6 +66,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->close();
     }
 }
+// Handle delete request via AJAX
+if (isset($_POST['delete_id'])) {
+    $delete_id = (int) $_POST['delete_id'];
+    $stmt = $conn->prepare("DELETE FROM user_workout_progress WHERE id = ? AND user_id = ?");
+    $stmt->bind_param("ii", $delete_id, $user_id);
+    if ($stmt->execute()) {
+        echo "Success";
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+    exit;
+}
+
+// Fetch progress records for the logged-in user
+$result = $conn->query("SELECT * FROM user_workout_progress WHERE user_id = $user_id ORDER BY id DESC");
+$progressData = $result->fetch_all(MYSQLI_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -161,6 +178,54 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             </div>
         </form>
+
+        <!-- Progress Table -->
+<div class="row mt-5">
+    <div class="col-md-12">
+        <h4>Your Progress Records</h4>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Age</th>
+                    <th>Height (cm)</th>
+                    <th>Weight (kg)</th>
+                    <th>Goal</th>
+                    <th>Sets</th>
+                    <th>Reps</th>
+                    <th>Weight Lifted (kg)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php if (!empty($progressData)): ?>
+                                <?php foreach ($progressData as $index => $progress): ?>
+                                                <tr id="row-<?= $progress['id'] ?>">
+                                                    <td><?= $index + 1 ?></td>
+                                                    <td><?= htmlspecialchars($progress['age']) ?></td>
+                                                    <td><?= htmlspecialchars($progress['height']) ?></td>
+                                                    <td><?= htmlspecialchars($progress['weight']) ?></td>
+                                                    <td><?= htmlspecialchars($progress['goal']) ?></td>
+                                                    <td><?= htmlspecialchars($progress['sets']) ?></td>
+                                                    <td><?= htmlspecialchars($progress['reps']) ?></td>
+                                                    <td><?= htmlspecialchars($progress['weight_lifted']) ?></td>
+                                                    <td>
+                                                        <button class="btn btn-danger btn-sm delete-btn" data-id="<?= $progress['id'] ?>">
+                                                            Delete
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                <?php endforeach; ?>
+                <?php else: ?>
+                                <tr>
+                                    <td colspan="9" class="text-center">No progress records found.</td>
+                                </tr>
+                <?php endif; ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+
     </div>
 </main>
 
@@ -172,5 +237,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="./js/jquery.dataTables.min.js"></script>
     <script src="./js/dataTables.bootstrap5.min.js"></script>
     <script src="./js/script.js"></script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Handle delete button click
+    document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            const rowId = this.getAttribute('data-id');
+            if (confirm("Are you sure you want to delete this record?")) {
+                fetch('my-progress.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: `delete_id=${rowId}`
+                })
+                .then(response => response.text())
+                .then(data => {
+                    if (data.trim() === 'Success') {
+                        document.getElementById(`row-${rowId}`).remove();
+                        alert("Record deleted successfully!");
+                    } else {
+                        alert("Error: Unable to delete record.");
+                    }
+                })
+                .catch(err => console.error(err));
+            }
+        });
+    });
+});
+</script>
+
   </body>
 </html>
