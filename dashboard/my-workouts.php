@@ -1,3 +1,10 @@
+<?php
+// Enable error reporting
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+include '../config/db.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,38 +40,67 @@
         <!-- Table for Workout Plans -->
         <div class="row">
           <div class="col-md-12 mb-3 mt-3">
-            <table id="workoutPlansTable" class="table table-striped table-bordered">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Workout Plan</th>
-                  <th>Purchase Date</th>
-                  <th>Duration</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- Sample Row 1 -->
-                <tr>
-                  <td>1</td>
-                  <td>Bodybuilding Plan</td>
-                  <td>2024-12-01</td>
-                  <td>3 Months</td>
-                  <td>$99.99</td>
-                  
-                </tr>
-                <!-- Sample Row 2 -->
-                <tr>
-                  <td>2</td>
-                  <td>Cardio Plan</td>
-                  <td>2024-12-05</td>
-                  <td>1 Month</td>
-                  <td>$49.99</td>
-                  
-                </tr>
-                <!-- Additional rows can go here -->
-              </tbody>
-            </table>
+          <table id="workoutPlansTable" class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Package Name</th>
+              <th>Purchase Date</th>
+              <th>Duration</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+          <?php
+          // Assuming user ID is stored in session as 'user_id'
+          if (isset($_SESSION['user_id'])) {
+            $user_id = $_SESSION['user_id']; // Get the logged-in user ID
+          } else {
+            // If no user is logged in, redirect to login page or handle accordingly
+            header("Location: login.php");
+            exit();
+          }
+
+          // SQL query to fetch workout purchases for the logged-in user
+          $sql = "SELECT id, package_name, purchase_date, duration, price FROM workout_purchases WHERE user_id = ?";
+          $stmt = mysqli_prepare($conn, $sql);
+
+          // Bind the user_id parameter to the query
+          mysqli_stmt_bind_param($stmt, "i", $user_id);
+
+          // Execute the query
+          mysqli_stmt_execute($stmt);
+
+          // Get the result
+          $result = mysqli_stmt_get_result($stmt);
+
+          if (!$result) {
+            die("Query failed: " . mysqli_error($conn)); // Debugging line
+          }
+
+          if (mysqli_num_rows($result) > 0) {
+            // Loop through each row and display it
+            while ($row = mysqli_fetch_assoc($result)) {
+              echo "<tr>";
+              echo "<td>" . htmlspecialchars($row['id']) . "</td>";
+              echo "<td>" . htmlspecialchars($row['package_name']) . "</td>";
+              echo "<td>" . htmlspecialchars($row['purchase_date']) . "</td>";
+              echo "<td>" . htmlspecialchars($row['duration']) . "</td>";
+              echo "<td>$" . htmlspecialchars($row['price']) . "</td>";
+              echo "</tr>";
+            }
+          } else {
+            // If no data found for this user
+            echo "<tr><td colspan='5'>No workout plans purchased yet.</td></tr>";
+          }
+
+          // Close the statement and connection
+          mysqli_stmt_close($stmt);
+          mysqli_close($conn);
+          ?>
+
+          </tbody>
+        </table>
           </div>
         </div>
       </div>
