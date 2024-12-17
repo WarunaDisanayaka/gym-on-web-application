@@ -20,7 +20,7 @@
                 Interface
               </div>
             </li>
-            <li>
+            <!-- <li>
               <a
                 class="nav-link px-3 sidebar-link"
                 data-bs-toggle="collapse"
@@ -46,7 +46,7 @@
                   </li>
                 </ul>
               </div>
-            </li>
+            </li> -->
             <li>
               <a href="my-workouts.php" class="nav-link px-3">
                 <span class="me-2"><i class="bi bi-book-fill"></i></span>
