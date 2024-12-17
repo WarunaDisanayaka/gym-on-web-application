@@ -1,3 +1,37 @@
+<?php
+
+session_start();
+include '../config/db.php';
+
+// Check if user is logged in
+if (!isset($_SESSION['user_id'])) {
+  die("You must be logged in to access this page.");
+}
+
+$user_id = $_SESSION['user_id'];
+// Fetch progress data for the logged-in user
+$query = "SELECT weight_lifted, sets, reps, DATE(created_at) AS progress_date FROM user_workout_progress WHERE user_id = ? ORDER BY created_at ASC";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+
+$progressData = [];
+$labels = []; // For dates
+$weightLifted = [];
+$sets = [];
+$reps = [];
+
+while ($row = $result->fetch_assoc()) {
+  $progressData[] = $row;
+  $labels[] = $row['progress_date'];
+  $weightLifted[] = $row['weight_lifted'];
+  $sets[] = $row['sets'];
+  $reps[] = $row['reps'];
+}
+
+$stmt->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -75,77 +109,14 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 mb-3">
-            <div class="card h-100">
-              <div class="card-header">
-                <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
-                Area Chart Example
-              </div>
-              <div class="card-body">
-                <canvas class="chart" width="400" height="200"></canvas>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <div class="card h-100">
-              <div class="card-header">
-                <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
-                Area Chart Example
-              </div>
-              <div class="card-body">
-                <canvas class="chart" width="400" height="200"></canvas>
-              </div>
-            </div>
-          </div>
+          
+          <div class="col-md-12">
+        <h4>Progress Overview</h4>
+        <canvas id="progressChart" height="100"></canvas>
+    </div>
         </div>
         <div class="row">
-          <div class="col-md-12 mb-3">
-            <div class="card">
-              <div class="card-header">
-                <span><i class="bi bi-table me-2"></i></span> Data Table
-              </div>
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table
-                    id="example"
-                    class="table table-striped data-table"
-                    style="width: 100%"
-                  >
-                    <thead>
-                      <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Tiger Nixon</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                      </tr>
-                      <tr>
-                        <td>Garrett Winters</td>
-                        <td>Accountant</td>
-                        <td>Tokyo</td>
-                        <td>63</td>
-                        <td>2011/07/25</td>
-                        <td>$170,750</td>
-                      </tr>
-                      
-                    </tbody>
-                   
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </main>
@@ -155,5 +126,75 @@
     <script src="./js/jquery.dataTables.min.js"></script>
     <script src="./js/dataTables.bootstrap5.min.js"></script>
     <script src="./js/script.js"></script>
+
+    <script>
+    // Pass PHP data to JavaScript
+    const labels = <?= json_encode($labels); ?>;
+    const weightLifted = <?= json_encode($weightLifted); ?>;
+    const sets = <?= json_encode($sets); ?>;
+    const reps = <?= json_encode($reps); ?>;
+
+    // Render Chart
+    const ctx = document.getElementById('progressChart').getContext('2d');
+    const progressChart = new Chart(ctx, {
+        type: 'line', // Use 'bar' for bar chart
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Weight Lifted (kg)',
+                    data: weightLifted,
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                },
+                {
+                    label: 'Sets',
+                    data: sets,
+                    borderColor: 'rgba(255, 159, 64, 1)',
+                    backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                },
+                {
+                    label: 'Reps',
+                    data: reps,
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderWidth: 2,
+                    tension: 0.4,
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Workout Progress Over Time'
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Date'
+                    }
+                },
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Values'
+                    }
+                }
+            }
+        }
+    });
+</script>
   </body>
 </html>
