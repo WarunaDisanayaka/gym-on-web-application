@@ -61,7 +61,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="nav-link px-3">
+              <a href="my-progress.php" class="nav-link px-3">
               <span class="me-2"><i class="bi bi-hourglass-split"></i></span>
                 <span>Progress</span>
               </a>
