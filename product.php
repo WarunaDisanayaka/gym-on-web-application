@@ -118,7 +118,7 @@
                 <figure>
                   <img src="assets/images/p-1.png" alt="Product Image 1">
                 </figure>
-                <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
               </div>
               <div class="data">
                 <div class="ratings">
@@ -141,7 +141,7 @@
                 <figure>
                   <img src="assets/images/product-5.png" alt="Product Image 2">
                 </figure>
-                <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
               </div>
               <div class="data">
                 <div class="ratings">
@@ -164,7 +164,7 @@
                 <figure>
                   <img src="assets/images/product-4.png" alt="Product Image 2">
                 </figure>
-                <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
               </div>
               <div class="data">
                 <div class="ratings">
@@ -187,7 +187,7 @@
                 <figure>
                   <img src="assets/images/product-6.png" alt="Product Image 2">
                 </figure>
-                <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
               </div>
               <div class="data">
                 <div class="ratings">
@@ -210,7 +210,7 @@
                 <figure>
                   <img src="assets/images/product-7.png" alt="Product Image 2">
                 </figure>
-                <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
               </div>
               <div class="data">
                 <div class="ratings">
@@ -233,7 +233,7 @@
                 <figure>
                   <img src="assets/images/product-8.png" alt="Product Image 2">
                 </figure>
-                <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
               </div>
               <div class="data">
                 <div class="ratings">
@@ -256,7 +256,7 @@
                 <figure>
                   <img src="assets/images/product-9.png" alt="Product Image 2">
                 </figure>
-                <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
               </div>
               <div class="data">
                 <div class="ratings">
@@ -279,7 +279,7 @@
                 <figure>
                   <img src="assets/images/product-10.png" alt="Product Image 2">
                 </figure>
-                <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
               </div>
               <div class="data">
                 <div class="ratings">
@@ -302,7 +302,7 @@
                 <figure>
                   <img src="assets/images/product-11.png" alt="Product Image 2">
                 </figure>
-                <a href="cart.html" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
               </div>
               <div class="data">
                 <div class="ratings">
