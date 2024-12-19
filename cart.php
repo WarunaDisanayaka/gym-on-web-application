@@ -114,90 +114,10 @@
               </li>
             </ul>
             <ul class="cart-table">
-              <li>
-                <div class="c-c">
-                  <div class="c-data">
-                    <a class="cr-svg d-flex-all" href="javascript:void(0)">
-                      <img src="assets/images/cross.svg" alt="Cross Svg">
-                    </a>
-                    <img src="assets/images/product-10.png" alt="Product One">
-                    <h2><a href="javascript:void(0)">Gym Water Bottel</a></h2>
-                  </div>
-                  <div class="c-price">
-                    <span class="orgnl">$ 40.00</span>
-                    <del class="sale">$ 50.00</del>
-                  </div>
-                  <div class="c-quality">
-                    <input type="number" name="number" value="1">
-                  </div>
-                  <div class="c-total">
-                    <span>$ 40.00</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="c-c">
-                  <div class="c-data">
-                    <a class="cr-svg d-flex-all" href="javascript:void(0)">
-                      <img src="assets/images/cross.svg" alt="Cross Svg">
-                    </a>
-                    <img src="assets/images/product-2.png" alt="Product One">
-                    <h2><a href="javascript:void(0)">Gym Water Bottel</a></h2>
-                  </div>
-                  <div class="c-price">
-                    <span class="orgnl">$ 40.00</span>
-                    <del class="sale">$ 50.00</del>
-                  </div>
-                  <div class="c-quality">
-                    <input type="number" name="number" value="1">
-                  </div>
-                  <div class="c-total">
-                    <span>$ 40.00</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="c-c">
-                  <div class="c-data">
-                    <a class="cr-svg d-flex-all" href="javascript:void(0)">
-                      <img src="assets/images/cross.svg" alt="Cross Svg">
-                    </a>
-                    <img src="assets/images/product-3.png" alt="Product One">
-                    <h2><a href="javascript:void(0)">Gym Water Bottel</a></h2>
-                  </div>
-                  <div class="c-price">
-                    <span class="orgnl">$ 40.00</span>
-                    <del class="sale">$ 50.00</del>
-                  </div>
-                  <div class="c-quality">
-                    <input type="number" name="number" value="1">
-                  </div>
-                  <div class="c-total">
-                    <span>$ 40.00</span>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="c-c">
-                  <div class="c-data">
-                    <a class="cr-svg d-flex-all" href="javascript:void(0)">
-                      <img src="assets/images/cross.svg" alt="Cross Svg">
-                    </a>
-                    <img src="assets/images/product-7.png" alt="Product One">
-                    <h2><a href="javascript:void(0)">Gym Workout Shoes</a></h2>
-                  </div>
-                  <div class="c-price">
-                    <span class="orgnl">$ 40.00</span>
-                    <del class="sale">$ 50.00</del>
-                  </div>
-                  <div class="c-quality">
-                    <input type="number" name="number" value="1">
-                  </div>
-                  <div class="c-total">
-                    <span>$ 40.00</span>
-                  </div>
-                </div>
-              </li>
+             
+              
+              
+             
             </ul>
           </div>
           <div class="update-cart d-flex-all justify-content-between">
@@ -325,6 +245,96 @@
   <!-- Custom Js -->
 
   <script src="assets/js/custom.js"></script>
+  <script>
+  // Retrieve cart items from localStorage
+  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+  // Function to render cart items
+  function renderCartItems() {
+    const cartTable = document.querySelector('.cart-table');
+    let subtotal = 0;
+
+    // Clear existing rows (except the header row)
+    cartTable.innerHTML = `
+      <li>
+        <div class="c-c">
+          <div class="c-data">
+            <span>Products</span>
+          </div>
+          <div class="c-price">
+            <span>Price</span>
+          </div>
+          <div class="c-quality">
+            <span>Quantity</span>
+          </div>
+          <div class="c-total">
+            <span>Total</span>
+          </div>
+        </div>
+      </li>
+    `;
+
+    // Populate the table with cart items
+    cartItems.forEach((item, index) => {
+      const itemTotal = item.price * item.quantity;
+      subtotal += itemTotal;
+
+      const cartRow = `
+        <li>
+          <div class="c-c">
+            <div class="c-data">
+              <a class="cr-svg d-flex-all" href="javascript:void(0)" onclick="removeItem(${index})">
+                <img src="assets/images/cross.svg" alt="Remove">
+              </a>
+              <img src="${item.image}" alt="${item.name}">
+              <h2><a href="javascript:void(0)">${item.title}</a></h2>
+            </div>
+            <div class="c-price">
+              <span class="orgnl">${item.price}</span>
+            </div>
+            <div class="c-quality">
+              <input type="number" name="quantity" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)">
+            </div>
+            <div class="c-total">
+              <span>${itemTotal}</span>
+            </div>
+          </div>
+        </li>
+      `;
+      cartTable.innerHTML += cartRow;
+    });
+
+    // Update totals
+    document.querySelector('.cart-total .final ul').innerHTML = `
+      <li><span>Subtotal:</span><span>$${subtotal}</span></li>
+      <li><span>Shipping:</span><span>$10.00</span></li>
+    `;
+    document.querySelector('.cart-total .total ul').innerHTML = `
+      <li><span>Total:</span><span>$${(subtotal + 10)}</span></li>
+    `;
+  }
+
+  // Function to remove an item from the cart
+  function removeItem(index) {
+    cartItems.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    renderCartItems();
+  }
+
+  // Function to update item quantity
+  function updateQuantity(index, quantity) {
+    cartItems[index].quantity = parseInt(quantity);
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    renderCartItems();
+  }
+
+  // Initialize the cart page
+  document.addEventListener('DOMContentLoaded', renderCartItems);
+  const cartData = JSON.parse(localStorage.getItem('cart')) || [];
+console.log(cartData); // Check if the data is fetched correctly
+
+</script>
+
 </body>
 
 
