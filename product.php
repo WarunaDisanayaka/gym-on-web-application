@@ -421,6 +421,36 @@
   <!-- Custom Js -->
 
   <script src="assets/js/custom.js"></script>
+
+  <script>
+    // JavaScript to handle Add to Cart
+document.querySelectorAll('.theme-btn').forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // Get the product data
+    const product = btn.closest('.product');
+    const title = product.querySelector('h3 a').innerText;
+    const price = product.querySelector('.price-range span').innerText;
+    const image = product.querySelector('img').src;
+
+    // Create an object for the product
+    const cartItem = {
+      title,
+      price,
+      image,
+    };
+
+    // Retrieve cart from localStorage or initialize an empty array
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(cartItem); // Add new item to the cart
+    localStorage.setItem('cart', JSON.stringify(cart)); // Save cart back to localStorage
+
+    alert(`${title} added to cart!`);
+  });
+});
+
+  </script>
 </body>
 
 
