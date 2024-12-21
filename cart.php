@@ -120,12 +120,9 @@
              
             </ul>
           </div>
-          <div class="update-cart d-flex-all justify-content-between">
-            <form>
-              <input type="text" name="text" placeholder="Coupon Code">
-              <button type="submit" class="theme-btn">Apply</button>
-            </form>
-            <a href="contact.html" class="theme-btn">Update Cart </a>
+          <div class="update-cart d-flex-all justify-content-end">
+           
+            <a href="contact.html" class="theme-btn">Go to Checkout </a>
           </div>
         </div>
       </div>
