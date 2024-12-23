@@ -1,3 +1,30 @@
+<?php
+// Include the database connection file
+include './config/db.php';
+
+// Check if the product ID is provided in the URL
+if (isset($_GET['id'])) {
+  $product_id = $_GET['id'];
+
+  // Query to fetch product details based on the ID
+  $sql = "SELECT * FROM products WHERE id = ?";
+  $stmt = $conn->prepare($sql);
+  $stmt->bind_param('i', $product_id);
+  $stmt->execute();
+  $result = $stmt->get_result();
+
+  // Fetch product data
+  if ($result->num_rows > 0) {
+    $product = $result->fetch_assoc();
+  } else {
+    echo "Product not found!";
+    exit;
+  }
+} else {
+  echo "Invalid product ID!";
+  exit;
+}
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -99,22 +126,13 @@
             <ul class="pd-imgs">
               <li class="li-pd-imgs">
                 <a href="JavaScript:void(0)">
-                  <img src="assets/images/product-1.png" alt="Product Detail Image">
+                <img src="./adminDashboard/<?php echo $product['image_path']; ?>" alt="Product Image">
                 </a>
               </li>
-              <li class="li-pd-imgs">
-                <a href="JavaScript:void(0)">
-                  <img src="assets/images/product-2.png" alt="Product Detail Image">
-                </a>
-              </li>
-              <li class="li-pd-imgs">
-                <a href="JavaScript:void(0)">
-                  <img src="assets/images/product-3.png" alt="Product Detail Image">
-                </a>
-              </li>
+              
             </ul>
             <div class="pd-main-img">
-              <img id="NZoomImg" data-NZoomscale="2" style="width: 100%;height: 100%;" src="assets/images/product-1.png" alt="Product Detail Image">
+              <img id="NZoomImg" data-NZoomscale="2" style="width: 100%;height: 100%;" src="./adminDashboard/<?php echo $product['image_path']; ?>" alt="Product Detail Image">
             </div>
           </div>
         </div>
@@ -124,14 +142,13 @@
               <i class="fa-solid fa-star"></i>
               <span>5.0</span>
             </div>
-            <h2>Green Gym Water Bottel</h2>
+            <h2><?php echo htmlspecialchars($product['product_name']); ?></h2>
             <div class="pd-quality">
               <span>Quantity</span>
               <input type="number" name="number" value="1">
             </div>
             <ul class="pd-price">
-              <li class="pd-sale-price"><span>$</span>40.00</li>
-              <li class="pd-regular-price"><span>$</span><del>50.00</del></li>
+              <li class="pd-sale-price"><span>Rs</span><?php echo $product['price']; ?></li>
             </ul>
             <p class="free-ship">Free Shipping On This Item</p>
             <a href="javascript:void(0)" class="theme-btn">Add to Cart </a>
@@ -172,16 +189,13 @@
                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                   <div class="des-tab">
                     <h3>About Product</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla eu posuere scelerisque. Donec sagittis adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse interdum nulla eu posuere scelerisque. Donec sagittis adipiscing elit.</p>
-                    <p>A gym isn’t just a place for exercise; it’s the place you go to unwind, socialize & work out. The gym is a whole some experience. Some of the most successful facilities have several gym features that contribute to the kind of member experience that drives retention and sales.</p>
+                    <p><?php echo htmlspecialchars($product['description']); ?></p>
                     <ul class="sm-circle">
                       <li>Experience that drives retention and sales</li>
                       <li>Nurturing and empowering the environment</li>
                       <li>The place you go to unwind, socialize & work out</li>
                     </ul>
-                    <figure>
-                      <img class="w-100" src="assets/images/pd-des-img.jpg" alt="Description Image">
-                    </figure>
+                    
                   </div>
                 </div>
                 <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">

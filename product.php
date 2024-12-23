@@ -1,3 +1,22 @@
+<?php
+// Include the database connection
+include './config/db.php';
+
+// Fetch products from the database
+$sql = "SELECT * FROM products";  // Adjust the table name as needed
+$result = $conn->query($sql);
+
+$products = [];
+if ($result->num_rows > 0) {
+  // Fetch all products into an array
+  while ($row = $result->fetch_assoc()) {
+    $products[] = $row;
+  }
+} else {
+  echo "No products found";
+}
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -110,217 +129,36 @@
       </div>
     </div>
     <div class="container">
-      <div class="row p-slider align-items-center justify-content-between grid">
-        <div class="col-lg-4" >
-          <div class="product">
-            <div class="main-data">
-              <div class="btn-hover">
-                <figure>
-                  <img src="assets/images/p-1.png" alt="Product Image 1">
-                </figure>
-                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
+    <div class="row p-slider align-items-center justify-content-between grid">
+        <?php foreach ($products as $product): ?>
+              <div class="col-lg-4">
+                  <div class="product">
+                      <div class="main-data">
+                          <div class="btn-hover">
+                              <figure>
+                                  <img src="./adminDashboard/<?php echo htmlspecialchars($product['image_path']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                              </figure>
+                              <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
+                          </div>
+                          <div class="data">
+                              <div class="ratings">
+                                  <i class="fa-solid fa-star"></i>
+                                  <span>5.0</span> <!-- Replace with actual rating if you have it -->
+                              </div>
+                              <h3><a href="product-detail.php?id=<?php echo $product['id']; ?>"><?php echo htmlspecialchars($product['product_name']); ?></a></h3>
+                              <div class="price-range">
+                                  <span>Rs <?php echo number_format($product['price'], 2); ?></span>
+                              </div>
+                          </div>
+                      </div>
+                      <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
+                  </div>
               </div>
-              <div class="data">
-                <div class="ratings">
-                  <i class="fa-solid fa-star"></i>
-                  <span>5.0</span>
-                </div>
-                <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                <div class="price-range">
-                  <span>$18.60</span>
-                </div>
-              </div>
-            </div>
-            <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-4" >
-          <div class="product">
-            <div class="main-data">
-              <div class="btn-hover">
-                <figure>
-                  <img src="assets/images/product-5.png" alt="Product Image 2">
-                </figure>
-                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="data">
-                <div class="ratings">
-                  <i class="fa-solid fa-star"></i>
-                  <span>5.0</span>
-                </div>
-                <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                <div class="price-range">
-                  <span>$18.60</span>
-                </div>
-              </div>
-            </div>
-            <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-4" >
-          <div class="product">
-            <div class="main-data">
-              <div class="btn-hover">
-                <figure>
-                  <img src="assets/images/product-4.png" alt="Product Image 2">
-                </figure>
-                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="data">
-                <div class="ratings">
-                  <i class="fa-solid fa-star"></i>
-                  <span>5.0</span>
-                </div>
-                <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                <div class="price-range">
-                  <span>$18.60</span>
-                </div>
-              </div>
-            </div>
-            <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-4" >
-          <div class="product">
-            <div class="main-data">
-              <div class="btn-hover">
-                <figure>
-                  <img src="assets/images/product-6.png" alt="Product Image 2">
-                </figure>
-                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="data">
-                <div class="ratings">
-                  <i class="fa-solid fa-star"></i>
-                  <span>5.0</span>
-                </div>
-                <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                <div class="price-range">
-                  <span>$18.60</span>
-                </div>
-              </div>
-            </div>
-            <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-4" >
-          <div class="product">
-            <div class="main-data">
-              <div class="btn-hover">
-                <figure>
-                  <img src="assets/images/product-7.png" alt="Product Image 2">
-                </figure>
-                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="data">
-                <div class="ratings">
-                  <i class="fa-solid fa-star"></i>
-                  <span>5.0</span>
-                </div>
-                <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                <div class="price-range">
-                  <span>$18.60</span>
-                </div>
-              </div>
-            </div>
-            <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-4" >
-          <div class="product">
-            <div class="main-data">
-              <div class="btn-hover">
-                <figure>
-                  <img src="assets/images/product-8.png" alt="Product Image 2">
-                </figure>
-                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="data">
-                <div class="ratings">
-                  <i class="fa-solid fa-star"></i>
-                  <span>5.0</span>
-                </div>
-                <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                <div class="price-range">
-                  <span>$18.60</span>
-                </div>
-              </div>
-            </div>
-            <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-4" >
-          <div class="product">
-            <div class="main-data">
-              <div class="btn-hover">
-                <figure>
-                  <img src="assets/images/product-9.png" alt="Product Image 2">
-                </figure>
-                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="data">
-                <div class="ratings">
-                  <i class="fa-solid fa-star"></i>
-                  <span>5.0</span>
-                </div>
-                <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                <div class="price-range">
-                  <span>$18.60</span>
-                </div>
-              </div>
-            </div>
-            <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-4" >
-          <div class="product">
-            <div class="main-data">
-              <div class="btn-hover">
-                <figure>
-                  <img src="assets/images/product-10.png" alt="Product Image 2">
-                </figure>
-                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="data">
-                <div class="ratings">
-                  <i class="fa-solid fa-star"></i>
-                  <span>5.0</span>
-                </div>
-                <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                <div class="price-range">
-                  <span>$18.60</span>
-                </div>
-              </div>
-            </div>
-            <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-4" >
-          <div class="product">
-            <div class="main-data">
-              <div class="btn-hover">
-                <figure>
-                  <img src="assets/images/product-11.png" alt="Product Image 2">
-                </figure>
-                <a href="cart.php" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-              </div>
-              <div class="data">
-                <div class="ratings">
-                  <i class="fa-solid fa-star"></i>
-                  <span>5.0</span>
-                </div>
-                <h3><a href="product-detail.html">Customised Gym Bottle</a></h3>
-                <div class="price-range">
-                  <span>$18.60</span>
-                </div>
-              </div>
-            </div>
-            <a href="javascript:void(0)" class="theme-btn">Add to Cart <i class="fa-solid fa-bag-shopping"></i></a>
-          </div>
-        </div>
-      </div>
+        <?php endforeach; ?>
     </div>
-    <div class="container" >
+</div>
+
+    <!-- <div class="container" >
       <div class="row">
         <div class="gym-pagination">
           <nav aria-label="Page navigation example">
@@ -336,7 +174,7 @@
           </nav>
         </div>
       </div>
-    </div>
+    </div> -->
   </section>
   <!-- Shop Style One End -->
 

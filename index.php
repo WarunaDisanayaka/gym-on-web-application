@@ -189,48 +189,7 @@
   <!-- About Style One End -->
 
   <!-- Counter Style One Start -->
-  <section class="gap no-top counter-style-one">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-12" >
-          <div class="counter-data">
-            <div class="count">
-              <span class="counter">10</span>+
-            </div>
-            <h6>Years Experience</h6>
-            <h4>Lorem ipsum dolor sit amet, consectne auctor aliquet.</h4>
-          </div>
-        </div> 
-        <div class="col-lg-3 col-md-6 col-sm-12" >
-          <div class="counter-data">
-            <div class="count">
-              <span class="counter">90</span>+
-            </div>
-            <h6>Experts Trainers</h6>
-            <h4>Lorem ipsum dolor sit amet, consectne auctor aliquet.</h4>
-          </div>
-        </div> 
-        <div class="col-lg-3 col-md-6 col-sm-12" >
-          <div class="counter-data">
-            <div class="count">
-              <span class="counter">65</span>+
-            </div>
-            <h6>Workout Classes</h6>
-            <h4>Lorem ipsum dolor sit amet, consectne auctor aliquet.</h4>
-          </div>
-        </div> 
-        <div class="col-lg-3 col-md-6 col-sm-12" >
-          <div class="counter-data">
-            <div class="count">
-              <span class="counter">14</span>k
-            </div>
-            <h6>Satisfied Clients</h6>
-            <h4>Lorem ipsum dolor sit amet, consectne auctor aliquet.</h4>
-          </div>
-        </div> 
-      </div>
-    </div>
-  </section>
+  
   <!-- Counter Style One End -->
 
   <!-- Project Style One Start -->
@@ -311,105 +270,10 @@
   <section class="gap team-style-one">
     <div class="heading-style-2">
       <div class="container">
-        <div class="row align-items-center reveal1 it-reveal-animation">
-          <div class="col-lg-6 col-md-8">
-            <div class="data">
-              <span>Meet Experts Trainers</span>
-              <h2>Expert Coaches</h2>
-            </div>
-          </div> 
-          <div class="col-lg-6 col-md-4">
-            <div class="team-slider-nav">
-              
-            </div>
-          </div>         
-        </div>
+        
       </div>
     </div>
-    <div class="container">
-      <div class="row reveal1 it-reveal-animation">
-        <div class="col-lg-12">
-          <div class="team-slider owl-carousel">
-            <div class="team-data item">
-              <div class="team-info">
-                <h3>Gorden Qlark</h3>
-                <p>CROSSFIT COACH</p>
-                <div class="team-social-media">
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a> 
-                    <a href="#"><i class="flaticon-twitter"></i></a> 
-                    <a href="#"><i class="flaticon-instagram"></i></a>  
-                </div>
-                <svg width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M261 0L190.483 144.088H128.135L162.104 102.062L188.333 45.885H89.8666L70.0873 87.4818H117.815L0 235L49.0181 125.219H0L61.9176 0H261Z"></path>
-                </svg>
-              </div>
-              <div class="team-image">
-                <figure>
-                  <img src="assets/images/team-1.png" alt="team-3">
-                </figure>
-              </div> 
-            </div> 
-            <div class="team-data item">
-              <div class="team-info">
-                <h3>Moniqa Linda</h3>
-                <p>FITNESS COACH</p>
-                <div class="team-social-media">
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a> 
-                    <a href="#"><i class="flaticon-twitter"></i></a> 
-                    <a href="#"><i class="flaticon-instagram"></i></a>  
-                </div>
-                <svg width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M261 0L190.483 144.088H128.135L162.104 102.062L188.333 45.885H89.8666L70.0873 87.4818H117.815L0 235L49.0181 125.219H0L61.9176 0H261Z"></path>
-                </svg>
-              </div>
-              <div class="team-image">
-                <figure>
-                  <img src="assets/images/team-2.png" alt="team-3">
-                </figure>
-              </div> 
-            </div>
-            <div class="team-data item">
-              <div class="team-info">
-                <h3>Robert Jessi</h3>
-                <p>BODYBUILDING COACH</p>
-                <div class="team-social-media">
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a> 
-                    <a href="#"><i class="flaticon-twitter"></i></a> 
-                    <a href="#"><i class="flaticon-instagram"></i></a>  
-                </div>
-                <svg width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M261 0L190.483 144.088H128.135L162.104 102.062L188.333 45.885H89.8666L70.0873 87.4818H117.815L0 235L49.0181 125.219H0L61.9176 0H261Z"></path>
-                </svg>
-              </div>
-              <div class="team-image">
-                <figure>
-                  <img src="assets/images/team-3.png" alt="team-3">
-                </figure>
-              </div> 
-            </div>
-            <div class="team-data item">
-              <div class="team-info">
-                <h3>Willimes Haniq</h3>
-                <p>YOGA COACH</p>
-                <div class="team-social-media">
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a> 
-                    <a href="#"><i class="flaticon-twitter"></i></a> 
-                    <a href="#"><i class="flaticon-instagram"></i></a>  
-                </div>
-                <svg width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M261 0L190.483 144.088H128.135L162.104 102.062L188.333 45.885H89.8666L70.0873 87.4818H117.815L0 235L49.0181 125.219H0L61.9176 0H261Z"></path>
-                </svg>
-              </div>
-              <div class="team-image">
-                <figure>
-                  <img src="assets/images/team-4.png" alt="team-3">
-                </figure>
-              </div> 
-            </div> 
-          </div>
-        </div>
-      </div>
-    </div>
+    
   </section>
   <!-- Team Style One End -->
 
@@ -522,17 +386,11 @@
 
   <!-- Renovation Start -->
   <section class="gap renovation">
-  <video poster="../../../../sb.vox1.net/video/poligonBG.jpg" playsinline autoplay muted loop>
-    <source src="https://sb.vox1.net/video/poligons.mp4" type="video/mp4">
-  </video>
-  <div class="jumbotron">
-    <h1>gym on</h1>
-   </div>  
-   <div class="reno-data">
-      <h2>Be Strong, Be Fit and Be Healthy With Us</h2>
-      <p>Next 6 week session begins <span>Monday April 29th.</span></p>
-      <a class="theme-btn" href="#">Join Us Group Training</a>
-    </div>
+  <video autoplay muted loop>
+        <source src="assets/videos/Creativity Takes Courage - Body Engineers Prometheus Collection.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+   
   </section>
   <!-- Renovation End -->
 
