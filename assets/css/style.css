@@ -2188,6 +2188,15 @@ footer:before {
     width: 180px;
     height: auto;
 }
+.logo-text {
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make it bold if necessary */
+    color: white;
+    text-transform: uppercase; /* Optional: makes the text uppercase */
+    letter-spacing: 1px; /* Optional: for spacing between letters */
+    text-decoration: none; /* Ensures there's no underline */
+  }
+  
 .header-style-one .nav-bar > ul > li:not(:last-child) {
     margin-right: 40px;
 }
