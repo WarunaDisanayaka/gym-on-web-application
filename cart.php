@@ -135,11 +135,11 @@
               <ul>
                 <li>
                   <span>Subtotal:</span>
-                  <span>$358.00</span>
+                  <span></span>
                 </li>
                 <li>
                   <span>Shipping:</span>
-                  <span>$358.00</span>
+                  <span></span>
                 </li>
               </ul>
             </div>
@@ -147,7 +147,7 @@
               <ul>
                 <li>
                   <span>Total:</span>
-                  <span>$358.00</span>
+                  <span></span>
                 </li>
               </ul>
             </div>
@@ -245,71 +245,97 @@
   <script>
   // Retrieve cart items from localStorage
   const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-
+console.log(cartItems);
   // Function to render cart items
   function renderCartItems() {
-    const cartTable = document.querySelector('.cart-table');
-    let subtotal = 0;
+  const cartTable = document.querySelector('.cart-table');
+  let subtotal = 0;
 
-    // Clear existing rows (except the header row)
-    cartTable.innerHTML = `
+  // Clear existing rows (except the header row)
+  cartTable.innerHTML = `
+    <li>
+      <div class="c-c">
+        <div class="c-data">
+          <span>Products</span>
+        </div>
+        <div class="c-price">
+          <span>Price</span>
+        </div>
+        <div class="c-total">
+          <span>Total</span>
+        </div>
+      </div>
+    </li>
+  `;
+
+  // Function to clean the price string
+  function parsePrice(priceStr) {
+    console.log('Raw price string:', priceStr);  // Debugging step
+    // Remove currency symbol (e.g., "RS") and commas
+    const cleanedPriceStr = priceStr.replace(/[^0-9.-]+/g, '');
+    console.log('Cleaned price string:', cleanedPriceStr);  // Debugging step
+    return parseFloat(cleanedPriceStr);
+  }
+
+  // Log cartItems to check for quantity field
+  console.log('Cart Items:', cartItems);
+
+  // Populate the table with cart items
+  cartItems.forEach((item, index) => {
+    // Ensure quantity is a number and has a valid value
+    const price = parsePrice(item.price);
+    let quantity = parseInt(item.quantity);
+
+    // Fallback if quantity is not valid
+    if (isNaN(quantity) || quantity <= 0) {
+      console.warn(`Invalid quantity for item ${index}: ${item.title}. Using fallback quantity of 1.`);
+      quantity = 1; // Fallback value
+    }
+
+    console.log('Parsed price:', price, 'Quantity:', quantity);  // Debugging step
+
+    if (isNaN(price) || quantity <= 0) {
+      console.error(`Invalid price or quantity for item ${index}:`, item);
+      return; // Skip this item if price or quantity is invalid
+    }
+
+    const itemTotal = price * quantity;
+    subtotal += itemTotal;
+
+    const cartRow = `
       <li>
         <div class="c-c">
           <div class="c-data">
-            <span>Products</span>
+            <a class="cr-svg d-flex-all" href="javascript:void(0)" onclick="removeItem(${index})">
+              <img src="assets/images/cross.svg" alt="Remove">
+            </a>
+            <img src="${item.image}" alt="${item.title}">
+            <h2><a href="javascript:void(0)">${item.title}</a></h2>
           </div>
           <div class="c-price">
-            <span>Price</span>
-          </div>
-          <div class="c-quality">
-            <span>Quantity</span>
+            <span class="orgnl">Rs ${price.toFixed(2)}</span>
           </div>
           <div class="c-total">
-            <span>Total</span>
+            <span>Rs ${itemTotal.toFixed(2)}</span>
           </div>
         </div>
       </li>
     `;
+    cartTable.innerHTML += cartRow;
+  });
 
-    // Populate the table with cart items
-    cartItems.forEach((item, index) => {
-      const itemTotal = item.price * item.quantity;
-      subtotal += itemTotal;
+  // Log subtotal to debug
+  console.log('Subtotal:', subtotal);
 
-      const cartRow = `
-        <li>
-          <div class="c-c">
-            <div class="c-data">
-              <a class="cr-svg d-flex-all" href="javascript:void(0)" onclick="removeItem(${index})">
-                <img src="assets/images/cross.svg" alt="Remove">
-              </a>
-              <img src="${item.image}" alt="${item.name}">
-              <h2><a href="javascript:void(0)">${item.title}</a></h2>
-            </div>
-            <div class="c-price">
-              <span class="orgnl">${item.price}</span>
-            </div>
-            <div class="c-quality">
-              <input type="number" name="quantity" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)">
-            </div>
-            <div class="c-total">
-              <span>${itemTotal}</span>
-            </div>
-          </div>
-        </li>
-      `;
-      cartTable.innerHTML += cartRow;
-    });
+  // Update totals
+  document.querySelector('.cart-total .final ul').innerHTML = `
+    <li><span>Subtotal:</span><span>Rs ${subtotal.toFixed(2)}</span></li>
+  `;
+  document.querySelector('.cart-total .total ul').innerHTML = `
+    <li><span>Total:</span><span>Rs ${(subtotal).toFixed(2)}</span></li>
+  `;
+}
 
-    // Update totals
-    document.querySelector('.cart-total .final ul').innerHTML = `
-      <li><span>Subtotal:</span><span>$${subtotal}</span></li>
-      <li><span>Shipping:</span><span>$10.00</span></li>
-    `;
-    document.querySelector('.cart-total .total ul').innerHTML = `
-      <li><span>Total:</span><span>$${(subtotal + 10)}</span></li>
-    `;
-  }
 
   // Function to remove an item from the cart
   function removeItem(index) {
