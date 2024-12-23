@@ -161,89 +161,61 @@
                   </div>
                </div>
                <div class="col-lg-8">
-                  <div class="tab-content" id="pills-tabContent">
-                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                        <figure>
-                           <img class="w-100" src="assets/images/service-nav-img-1.jpg" alt="Services Nav Image 1">
-                           <figcaption>
-                              <h3>Online Classes</h3>
-                              <p>Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor incididunt ut labore et .</p>
-                           </figcaption>
-                        </figure>
-                     </div>
-                     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                        <figure>
-                           <img class="w-100" src="assets/images/service-nav-img-2.jpg" alt="Services Nav Image 2">
-                           <figcaption>
-                              <h3>Weight Liftings</h3>
-                              <p>Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor incididunt ut labore et .</p>
-                           </figcaption>
-                        </figure>
-                     </div>
-                     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                        <figure>
-                           <img class="w-100" src="assets/images/service-nav-img-3.jpg" alt="Services Nav Image 3">
-                           <figcaption>
-                              <h3>Personal Trainer</h3>
-                              <p>Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor incididunt ut labore et .</p>
-                           </figcaption>
-                        </figure>
-                     </div>
-                     <div class="tab-pane fade" id="pills-reno" role="tabpanel" aria-labelledby="pills-reno-tab">
-                        <figure>
-                           <img class="w-100" src="assets/images/service-nav-img-4.jpg" alt="Services Nav Image 4">
-                           <figcaption>
-                              <h3>Yoga Classes</h3>
-                              <p>Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor incididunt ut labore et .</p>
-                           </figcaption>
-                        </figure>
-                     </div>
-                     <div class="tab-pane fade" id="pills-bld" role="tabpanel" aria-labelledby="pills-bld-tab">
-                        <figure>
-                           <img class="w-100" src="assets/images/service-nav-img-5.jpg" alt="Services Nav Image 5">
-                           <figcaption>
-                              <h3>Free Consulting</h3>
-                              <p>Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor incididunt ut labore et .</p>
-                           </figcaption>
-                        </figure>
-                     </div>
-                  </div>
+               <div class="tab-content" id="pills-tabContent">
+   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+      <figure>
+         <img class="w-100" src="assets/images/service-nav-img-1.jpg" alt="Online Classes">
+         <figcaption>
+            <h3>Online Classes</h3>
+            <p>Join our live and on-demand online fitness classes, including strength training, cardio, and yoga, from the comfort of your home.</p>
+         </figcaption>
+      </figure>
+   </div>
+   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+      <figure>
+         <img class="w-100" src="assets/images/service-nav-img-2.jpg" alt="Weight Lifting">
+         <figcaption>
+            <h3>Weight Lifting</h3>
+            <p>Build strength and tone muscles with our state-of-the-art weightlifting equipment and expert-guided sessions.</p>
+         </figcaption>
+      </figure>
+   </div>
+   <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+      <figure>
+         <img class="w-100" src="assets/images/service-nav-img-3.jpg" alt="Personal Trainer">
+         <figcaption>
+            <h3>Personal Trainer</h3>
+            <p>Achieve your fitness goals with personalized training programs designed by our certified personal trainers.</p>
+         </figcaption>
+      </figure>
+   </div>
+   <div class="tab-pane fade" id="pills-reno" role="tabpanel" aria-labelledby="pills-reno-tab">
+      <figure>
+         <img class="w-100" src="assets/images/service-nav-img-4.jpg" alt="Yoga Classes">
+         <figcaption>
+            <h3>Yoga Classes</h3>
+            <p>Relax and rejuvenate with our yoga classes, focusing on improving flexibility, balance, and mindfulness.</p>
+         </figcaption>
+      </figure>
+   </div>
+   <div class="tab-pane fade" id="pills-bld" role="tabpanel" aria-labelledby="pills-bld-tab">
+      <figure>
+         <img class="w-100" src="assets/images/service-nav-img-5.jpg" alt="Free Consulting">
+         <figcaption>
+            <h3>Free Consultation</h3>
+            <p>Meet with our fitness experts for a free consultation to create a workout plan tailored to your needs and goals.</p>
+         </figcaption>
+      </figure>
+   </div>
+</div>
+
                </div>
             </div>
          </div>
       </section>
       <!-- Services End -->
       <!-- Counter Style One Start -->
-      <section class="gap no-top counter-style-one">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-4" >
-                  <div class="counter-data">
-                     <div class="count">
-                        <span class="counter">10</span>+<i>Years</i>
-                     </div>
-                     <h4>Professional Experience</h4>
-                  </div>
-               </div>
-               <div class="col-lg-4" >
-                  <div class="counter-data upper-space">
-                     <div class="count">
-                        <span class="counter">90</span><i>Trainers</i>
-                     </div>
-                     <h4>Experts Trainers Team Members</h4>
-                  </div>
-               </div>
-               <div class="col-lg-4" >
-                  <div class="counter-data">
-                     <div class="count">
-                        <span class="counter">21</span>+<i>Locations</i>
-                     </div>
-                     <h4>Differnt centers in different states</h4>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
+      
       <!-- Counter Style One End -->
       <video autoplay muted loop>
          <source src="assets/videos/video.mp4" type="video/mp4">
@@ -259,98 +231,87 @@
             <h2>Exclusive Services</h2>
          </div>
          <div class="container">
-            <div class="row g-0">
-               <div class="col-lg-4 col-md-6 col-sm-12" >
-                  <div class="service-two-box" style="background-image: url(assets/images/service-1.jpg);">
-                     <h3><a href="service-detail.php">best equipment</a></h3>
-                     <p>Designing and Building The Most Beautiful Custom Homes.</p>
-                     <i class="flaticon flaticon-fitness"></i>
-                     <div class="service-two-icon d-flex-all justify-content-start">
-                        <a href="service-detail.php">
-                        <i class="fa-solid fa-arrow-up-long"></i>
-                        </a>
-                     </div>
-                     <svg class="theme-shaps" width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M261 0L190.483 144.088H128.135L162.104 102.062L188.333 45.885H89.8666L70.0873 87.4818H117.815L0 235L49.0181 125.219H0L61.9176 0H261Z" ></path>
-                     </svg>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-12" >
-                  <div class="service-two-box" style="background-image: url(assets/images/service-2.jpg);">
-                     <h3><a href="service-detail.php">expert trainers</a></h3>
-                     <p>Designing and Building The Most Beautiful Custom Homes.</p>
-                     <i class="flaticon-muscle-1 flaticon"></i> 
-                     <div class="service-two-icon d-flex-all justify-content-start">
-                        <a href="service-detail.php">
-                        <i class="fa-solid fa-arrow-up-long"></i>
-                        </a>
-                     </div>
-                     <svg class="theme-shaps" width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M261 0L190.483 144.088H128.135L162.104 102.062L188.333 45.885H89.8666L70.0873 87.4818H117.815L0 235L49.0181 125.219H0L61.9176 0H261Z" ></path>
-                     </svg>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-12" >
-                  <div class="service-two-box" style="background-image: url(assets/images/service-3.jpg);">
-                     <h3><a href="service-detail.php">group training</a></h3>
-                     <p>Designing and Building The Most Beautiful Custom Homes.</p>
-                     <i class="flaticon flaticon-jump-rope"></i>
-                     <div class="service-two-icon d-flex-all justify-content-start">
-                        <a href="service-detail.php">
-                        <i class="fa-solid fa-arrow-up-long"></i>
-                        </a>
-                     </div>
-                     <svg class="theme-shaps" width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M261 0L190.483 144.088H128.135L162.104 102.062L188.333 45.885H89.8666L70.0873 87.4818H117.815L0 235L49.0181 125.219H0L61.9176 0H261Z" ></path>
-                     </svg>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-12" >
-                  <div class="service-two-box" style="background-image: url(assets/images/service-4.jpg);">
-                     <h3><a href="service-detail.php">diet nutrition</a></h3>
-                     <p>Designing and Building The Most Beautiful Custom Homes.</p>
-                     <i class="flaticon flaticon-weight-loss"></i>
-                     <div class="service-two-icon d-flex-all justify-content-start">
-                        <a href="service-detail.php">
-                        <i class="fa-solid fa-arrow-up-long"></i>
-                        </a>
-                     </div>
-                     <svg class="theme-shaps" width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M261 0L190.483 144.088H128.135L162.104 102.062L188.333 45.885H89.8666L70.0873 87.4818H117.815L0 235L49.0181 125.219H0L61.9176 0H261Z" ></path>
-                     </svg>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-12" >
-                  <div class="service-two-box" style="background-image: url(assets/images/service-5.jpg);">
-                     <h3><a href="service-detail.php">workout classes</a></h3>
-                     <p>Designing and Building The Most Beautiful Custom Homes.</p>
-                     <i class="flaticon flaticon-exercise"></i>
-                     <div class="service-two-icon d-flex-all justify-content-start">
-                        <a href="service-detail.php">
-                        <i class="fa-solid fa-arrow-up-long"></i>
-                        </a>
-                     </div>
-                     <svg class="theme-shaps" width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M261 0L190.483 144.088H128.135L162.104 102.062L188.333 45.885H89.8666L70.0873 87.4818H117.815L0 235L49.0181 125.219H0L61.9176 0H261Z" ></path>
-                     </svg>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-md-6 col-sm-12" >
-                  <div class="service-two-box" style="background-image: url(assets/images/service-6.jpg);">
-                     <h3><a href="service-detail.php">yoga relaxation</a></h3>
-                     <p>Designing and Building The Most Beautiful Custom Homes.</p>
-                     <i class="flaticon flaticon-lotus-position"></i>
-                     <div class="service-two-icon d-flex-all justify-content-start">
-                        <a href="service-detail.php">
-                        <i class="fa-solid fa-arrow-up-long"></i>
-                        </a>
-                     </div>
-                     <svg class="theme-shaps" width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M261 0L190.483 144.088H128.135L162.104 102.062L188.333 45.885H89.8666L70.0873 87.4818H117.815L0 235L49.0181 125.219H0L61.9176 0H261Z" ></path>
-                     </svg>
-                  </div>
-               </div>
-            </div>
+         <div class="row g-0">
+   <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="service-two-box" style="background-image: url(assets/images/service-1.jpg);">
+         <h3><a href="service-detail.php">State-of-the-Art Equipment</a></h3>
+         <p>Experience fitness with the latest and most advanced equipment designed for all training levels.</p>
+         <i class="flaticon flaticon-fitness"></i>
+         <div class="service-two-icon d-flex-all justify-content-start">
+            <a href="service-detail.php"></a>
+         </div>
+         <svg class="theme-shaps" width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
+            <path d="M261 0L190.483 144.088H128.135L162.104 102.062L188.333 45.885H89.8666L70.0873 87.4818H117.815L0 235L49.0181 125.219H0L61.9176 0H261Z"></path>
+         </svg>
+      </div>
+   </div>
+   <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="service-two-box" style="background-image: url(assets/images/service-2.jpg);">
+         <h3><a href="service-detail.php">Professional Trainers</a></h3>
+         <p>Learn from certified trainers who provide personalized guidance to help you achieve your fitness goals.</p>
+         <i class="flaticon-muscle-1 flaticon"></i>
+         <div class="service-two-icon d-flex-all justify-content-start">
+            <a href="service-detail.php"></a>
+         </div>
+         <svg class="theme-shaps" width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
+            <path d="M261 0L190.483 144.088H128.135L162.104 102.062L188.333 45.885H89.8666L70.0873 87.4818H117.815L0 235L49.0181 125.219H0L61.9176 0H261Z"></path>
+         </svg>
+      </div>
+   </div>
+   <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="service-two-box" style="background-image: url(assets/images/service-3.jpg);">
+         <h3><a href="service-detail.php">Group Training Programs</a></h3>
+         <p>Enjoy fun and motivating group classes that keep you engaged and fit.</p>
+         <i class="flaticon flaticon-jump-rope"></i>
+         <div class="service-two-icon d-flex-all justify-content-start">
+            <a href="service-detail.php"></a>
+         </div>
+         <svg class="theme-shaps" width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
+            <path d="M261 0L190.483 144.088H128.135L162.104 102.062L188.333 45.885H89.8666L70.0873 87.4818H117.815L0 235L49.0181 125.219H0L61.9176 0H261Z"></path>
+         </svg>
+      </div>
+   </div>
+   <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="service-two-box" style="background-image: url(assets/images/service-4.jpg);">
+         <h3><a href="service-detail.php">Personalized Diet Plans</a></h3>
+         <p>Get expert advice on nutrition and meal plans tailored to your health and fitness objectives.</p>
+         <i class="flaticon flaticon-weight-loss"></i>
+         <div class="service-two-icon d-flex-all justify-content-start">
+            <a href="service-detail.php"></a>
+         </div>
+         <svg class="theme-shaps" width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
+            <path d="M261 0L190.483 144.088H128.135L162.104 102.062L188.333 45.885H89.8666L70.0873 87.4818H117.815L0 235L49.0181 125.219H0L61.9176 0H261Z"></path>
+         </svg>
+      </div>
+   </div>
+   <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="service-two-box" style="background-image: url(assets/images/service-5.jpg);">
+         <h3><a href="service-detail.php">Dynamic Workout Classes</a></h3>
+         <p>Stay fit and active with high-energy classes that cater to different fitness levels.</p>
+         <i class="flaticon flaticon-exercise"></i>
+         <div class="service-two-icon d-flex-all justify-content-start">
+            <a href="service-detail.php"></a>
+         </div>
+         <svg class="theme-shaps" width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
+            <path d="M261 0L190.483 144.088H128.135L162.104 102.062L188.333 45.885H89.8666L70.0873 87.4818H117.815L0 235L49.0181 125.219H0L61.9176 0H261Z"></path>
+         </svg>
+      </div>
+   </div>
+   <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="service-two-box" style="background-image: url(assets/images/service-6.jpg);">
+         <h3><a href="service-detail.php">Yoga & Relaxation</a></h3>
+         <p>Discover peace and balance with our yoga sessions designed to improve flexibility and reduce stress.</p>
+         <i class="flaticon flaticon-lotus-position"></i>
+         <div class="service-two-icon d-flex-all justify-content-start">
+            <a href="service-detail.php"></a>
+         </div>
+         <svg class="theme-shaps" width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
+            <path d="M261 0L190.483 144.088H128.135L162.104 102.062L188.333 45.885H89.8666L70.0873 87.4818H117.815L0 235L49.0181 125.219H0L61.9176 0H261Z"></path>
+         </svg>
+      </div>
+   </div>
+</div>
+
          </div>
       </section>
       <!-- Service Style Two End -->
@@ -361,8 +322,6 @@
                <div class="col-lg-7" >
                   <div class="cta-data">
                      <h2>Let's Start Workout!</h2>
-                     <p>Lorem ipsum dolor sit amet, consectetur adi piscing elit, sed do eiusmod tempor incididunt ut labore et .</p>
-                     <a href="our-projects-2.php" class="theme-btn">Build a Project </a>
                   </div>
                </div>
                <div class="col-lg-5" >

@@ -66,8 +66,6 @@
             <span>high intensity</span>
             <h1>workout</h1>
             <p>for weight loss</p>
-            <h6><a href="callto:12345678999">12345678999</a></h6>
-            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="theme-btn">start consulting</a>
           </div>
           <img src="assets/images/slide-image-1.png" alt="img" class="gym-girl">
           <svg width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
@@ -79,8 +77,6 @@
             <span>high intensity</span>
             <h1>workout</h1>
             <p>for weight loss</p>
-            <h6><a href="callto:12345678999">12345678999</a></h6>
-            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="theme-btn">start consulting</a>
           </div>
           <img src="assets/images/slide-image-2.png" alt="img" class="gym-girl">
           <svg width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
@@ -92,8 +88,6 @@
             <span>Wellnss & relaxing</span>
             <h1>Yoga</h1>
             <p>for flourishing and good health</p>
-            <h6><a href="callto:12345678999">12345678999</a></h6>
-            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="theme-btn">start consulting</a>
           </div>
           <img src="assets/images/slide-image-3.png" alt="img" class="gym-girl">
           <svg width="261" height="235" viewBox="0 0 261 235" xmlns="http://www.w3.org/2000/svg">
@@ -120,30 +114,24 @@
           <div class="service-data"> 
             <i class="flaticon-gym-equipment"></i> 
             <h3><a href="service-detail.html">exercise cycle</a></h3>
-            <p>Lorem ipsum dolor sit amet, consectne auctor aliquet. Aenean sollicitudi bibendum auctor.</p>
-            <a class="icon" href="service-detail.html">
-              <i class="fa-solid fa-angles-right"></i>
-            </a> 
+            <p>An exercise cycle is a low-impact fitness tool ideal for improving stamina, burning calories, and strengthening legs, with adjustable resistance and digital tracking features for a personalized workout.</p>
+            
           </div>
         </div>
         <div class="col-lg-4 col-md-6" >
           <div class="service-data">
             <i class="flaticon-gym"></i>
             <h3><a href="service-detail.html">Expert Trainers</a></h3>
-            <p>Lorem ipsum dolor sit amet, consectne auctor aliquet. Aenean sollicitudi bibendum auctor.</p>
-            <a class="icon" href="service-detail.html">
-              <i class="fa-solid fa-angles-right"></i>
-            </a>
+            <p>Expert trainers are skilled professionals who guide you toward your fitness goals with personalized plans, proper techniques, and motivation, ensuring safe and effective results.</p>
+            
           </div>
         </div>
         <div class="col-lg-4 col-md-6" >
           <div class="service-data mb-0">
             <i class="flaticon-work-from-home"></i>
             <h3><a href="service-detail.html">Workout Schedule</a></h3>
-            <p>Lorem ipsum dolor sit amet, consectne auctor aliquet. Aenean sollicitudi bibendum auctor.</p>
-            <a class="icon" href="service-detail.html">
-              <i class="fa-solid fa-angles-right"></i>
-            </a>
+            <p>A workout schedule helps you stay consistent and achieve your fitness goals by organizing exercises, rest days, and routines tailored to your needs and lifestyle.</p>
+            
           </div>
         </div>
       </div>
@@ -210,7 +198,6 @@
             <div class="project-data">
                 <h4>Sunday: 8pm - 11pm</h4>
                 <h3><a href="class-details.html">Fitness Ball</a></h3>  
-                <a class="project-icon" href="#">read more</a>
             </div>
           </div>
         </div>
@@ -222,7 +209,6 @@
             <div class="project-data">
                 <h4>Monday: 8pm - 11pm</h4>
                 <h3><a href="class-details.html">Bench Press</a></h3>  
-                <a class="project-icon" href="#">read more</a>
             </div>
           </div>
         </div>
@@ -234,7 +220,6 @@
             <div class="project-data">
                 <h4>Tuesday: 8pm - 11pm</h4>
                 <h3><a href="class-details.html">Handstand Negatives</a></h3>  
-                <a class="project-icon" href="#">read more</a>
             </div>
           </div>
         </div>
@@ -246,7 +231,6 @@
             <div class="project-data">
                 <h4>Wednesday: 8pm - 11pm</h4>
                 <h3><a href="class-details.html">Weight Lifting</a></h3>  
-                <a class="project-icon" href="#">read more</a>
             </div>
           </div>
         </div>
@@ -258,7 +242,6 @@
             <div class="project-data">
                 <h4>Thursday: 8pm - 11pm</h4>
                 <h3><a href="class-details.html">Cross Training</a></h3>  
-                <a class="project-icon" href="#">read more</a>
             </div>
           </div>
         </div>
@@ -296,54 +279,56 @@
               </div>
             </div>
             <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <span class="num">01.</span> Fitness Platform
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil cum soluta nobis est elige impedit.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <span class="num">02.</span> Motivation and Accountability
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil cum soluta nobis est elige impedit.</p>                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <span class="num">03.</span> Clean and Hygienic
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil cum soluta nobis est elige impedit.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    <span class="num">04.</span> Training Ability
-                  </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil cum soluta nobis est elige impedit.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <span class="num">01.</span> Fitness Platform
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>Our fitness platform offers a wide range of tools and resources to help you achieve your health goals, including workout tracking, virtual classes, and expert advice to keep you on track.</p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <span class="num">02.</span> Motivation and Accountability
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>Stay motivated with personalized reminders, progress tracking, and a supportive community to keep you accountable as you work toward your fitness goals.</p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <span class="num">03.</span> Clean and Hygienic
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>Our facilities are maintained to the highest standards of cleanliness and hygiene, ensuring a safe and healthy environment for your workouts.</p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        <span class="num">04.</span> Training Ability
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>With expert trainers and tailored programs, we ensure that you receive the guidance you need to maximize your performance and achieve your fitness goals.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
         <div class="col-lg-6" >
@@ -394,177 +379,7 @@
   </section>
   <!-- Renovation End -->
 
-  <!-- Client Review Style One Start -->
-  <section class="gap client-review-style-one">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6" >
-            <div class="head-review">
-              <span>Testimonials</span>
-              <h3>Client’s Reviews</h3>
-            </div>
-          <div class="client-review-slider owl-carousel">
-            <div class="slider-data">
-              <p>Comprehensive services, state-of-the-art equipment, and a supportive environment ensuring members achieve their fitness objectives comfortably and effectively.</p>
-              <div class="bio d-flex-all justify-content-start w-100">
-                <div class="icon d-flex-all">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0 0 26 26"> <defs> <clipPath id="clip-Inverted"> <rect width="26" height="26"/> </clipPath> </defs> <g id="Inverted_" data-name="Inverted commas flaky" clip-path="url(#clip-Inverted)"> <path id="Path_3444" data-name="Path 3" d="M.032,24.036V14.478l-.032,0V8.991C.4.4,9.086,0,9.086,0V5.961c-3.535,0-3.555,3.03-3.555,3.03v4.045h5.5v11ZM0,8.991Z" transform="translate(14 0.964)"/> <path id="Path_weee4" data-name="Path 4" d="M.032,24.036V14.478l-.032,0V8.991C.4.4,9.086,0,9.086,0V5.961c-3.535,0-3.555,3.03-3.555,3.03v4.045h5.5v11ZM0,8.991Z" transform="translate(0.969 0.964)"/> </g> </svg>
-                </div>
-                <div class="details w-100">
-                  <h3>Marko Marlee</h3>
-                  <p>Chairman, Building Corp</p>
-                </div>
-              </div>
-            </div>
-            <div class="slider-data">
-              <p>The instructors are fantastic – very friendly and enthusiastic. The activities are varied from week to week which keeps it exciting. I would highly recommend this gym. We dive headfirst into your brand, content, and goals.</p>
-              <div class="bio d-flex-all justify-content-start w-100">
-                <div class="icon d-flex-all">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0 0 26 26"> <defs> <clipPath id="clip-Inverted_comma"> <rect width="26" height="26"/> </clipPath> </defs> <g id="Inver" data-name="Inverted commas flaky" clip-path="url(#clip-Inverted_comma)"> <path id="Path_332" data-name="Path 3" d="M.032,24.036V14.478l-.032,0V8.991C.4.4,9.086,0,9.086,0V5.961c-3.535,0-3.555,3.03-3.555,3.03v4.045h5.5v11ZM0,8.991Z" transform="translate(14 0.964)"/> <path id="Path_3344" data-name="Path 4" d="M.032,24.036V14.478l-.032,0V8.991C.4.4,9.086,0,9.086,0V5.961c-3.535,0-3.555,3.03-3.555,3.03v4.045h5.5v11ZM0,8.991Z" transform="translate(0.969 0.964)"/> </g> </svg>
-                </div>
-                <div class="details w-100">
-                  <h3>Christopher</h3>
-                  <p>Social Worker</p>
-                </div>
-              </div>
-            </div>
-            <div class="slider-data">
-              <p>Sed rhoncus nulla turpis, vitae rutrum velit iaculis et. Curabitur vestibulum, erat non imperdiet vulputate, est neque iaculis mi, at malesuada eros ante sit amet elit.</p>
-              <div class="bio d-flex-all justify-content-start w-100">
-                <div class="icon d-flex-all">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0 0 26 26"> <defs> <clipPath id="clip-Inve"> <rect width="26" height="26"/> </clipPath> </defs> <g id="Inverted_co" data-name="Inverted commas flaky" clip-path="url(#clip-Inve)"> <path id="Path_35555" data-name="Path 3" d="M.032,24.036V14.478l-.032,0V8.991C.4.4,9.086,0,9.086,0V5.961c-3.535,0-3.555,3.03-3.555,3.03v4.045h5.5v11ZM0,8.991Z" transform="translate(14 0.964)"/> <path id="Path_4545454" data-name="Path 4" d="M.032,24.036V14.478l-.032,0V8.991C.4.4,9.086,0,9.086,0V5.961c-3.535,0-3.555,3.03-3.555,3.03v4.045h5.5v11ZM0,8.991Z" transform="translate(0.969 0.964)"/> </g> </svg>
-                </div>
-                <div class="details w-100">
-                  <h3>Donald Paul</h3>
-                  <p>Fitness Trainer</p>
-                </div>
-              </div>
-            </div>
-            <div class="slider-data">
-              <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.natus error sit voluptatem accusantium doloremque laudantium. Veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-              <div class="bio d-flex-all justify-content-start w-100">
-                <div class="icon d-flex-all">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0 0 26 26"> <defs> <clipPath id="clip-Inverted_coadsadad"> <rect width="26" height="26"/> </clipPath> </defs> <g id="Inverte" data-name="Inverted commas flaky" clip-path="url(#clip-Inverted_coadsadad)"> <path id="Path_3fewrrw" data-name="Path 3" d="M.032,24.036V14.478l-.032,0V8.991C.4.4,9.086,0,9.086,0V5.961c-3.535,0-3.555,3.03-3.555,3.03v4.045h5.5v11ZM0,8.991Z" transform="translate(14 0.964)"/> <path id="Path_werwer4" data-name="Path 4" d="M.032,24.036V14.478l-.032,0V8.991C.4.4,9.086,0,9.086,0V5.961c-3.535,0-3.555,3.03-3.555,3.03v4.045h5.5v11ZM0,8.991Z" transform="translate(0.969 0.964)"/> </g> </svg>
-                </div>
-                <div class="details w-100">
-                  <h3>Kevin Samuel</h3>
-                  <p>Creative Head</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6" >
-          <figure class="reveal1 it-reveal-animation">
-            <img src="assets/images/clients-images.png" alt="Client Images">
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Client Review Style One End -->
 
-  <!-- Blog Style One Start -->
-  <section class="gap no-top blog-style-one">
-    <div class="heading">
-      <figure>
-        <img src="assets/images/heading-icon.png" alt="heading-icon">
-      </figure>
-      <span>Let us Help Guide</span>
-      <h2>Recent Articles</h2>
-    </div>
-    <div class="container reveal1 it-reveal-animation">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12">
-          <div class="blog-post">
-            <div class="blog-image">
-              <figure>
-                <img src="assets/images/blog-img-1.jpg" alt="blog-img-1">
-              </figure>
-              <a href="blog-detail.html">
-                <i class="fa-solid fa-angles-right"></i>
-              </a>
-            </div>
-            <div class="blog-data">
-              <span class="blog-date">January 9, 2025</span>
-              <h2>
-                <a href="blog-detail.html">10 tips how to prepare meals fast and easy weight loss</a>
-              </h2>
-              <div class="blog-author d-flex-all justify-content-start">
-                <div class="author-img">
-                  <figure>
-                    <img src="assets/images/blog-author-img.jpg" alt="Blog Author Img">
-                  </figure>
-                </div>
-                <div class="details">
-                  <h3> <span>by</span> Jakki James</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12" >
-          <div class="blog-post">
-            <div class="blog-image">
-              <figure>
-                <img src="assets/images/blog-img-2.jpg" alt="blog-img-2">
-              </figure>
-              <a href="blog-detail.html">
-                <i class="fa-solid fa-angles-right"></i>
-              </a>
-            </div>
-            <div class="blog-data">
-              <span class="blog-date">January 9, 2025</span>
-              <h2>
-                <a href="blog-detail.html">Interval training, and focusing on compound exercises.</a>
-              </h2>
-              <div class="blog-author d-flex-all justify-content-start">
-                <div class="author-img">
-                  <figure>
-                    <img src="assets/images/blog-author-img.jpg" alt="Blog Author Img">
-                  </figure>
-                </div>
-                <div class="details">
-                  <h3> <span>by</span> Jakki James</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12" >
-          <div class="blog-post">
-            <div class="blog-image">
-              <figure>
-                <img src="assets/images/blog-img-3.jpg" alt="blog-img-3">
-              </figure>
-              <a href="blog-detail.html">
-                <i class="fa-solid fa-angles-right"></i>
-              </a>
-            </div>
-            <div class="blog-data">
-              <span class="blog-date">January 9, 2025</span>
-              <h2>
-                <a href="blog-detail.html">How to Keep Your Body Healthy Over the Festive Season</a>
-              </h2>
-              <div class="blog-author d-flex-all justify-content-start">
-                <div class="author-img">
-                  <figure>
-                    <img src="assets/images/blog-author-img.jpg" alt="Blog Author Img 1">
-                  </figure>
-                </div>
-                <div class="details">
-                  <h3> <span>by</span> Jakki James</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="common-btn">
-        <a href="our-blog-1.html" class="theme-btn">View All Posts</a>
-      </div>
-    </div>
-  </section>
   <!-- Blog Style One End -->
 
   <!-- Footer Style One Start -->
