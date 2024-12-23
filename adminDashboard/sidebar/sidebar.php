@@ -9,7 +9,7 @@
               </div>
             </li>
             <li>
-              <a href="../dashboard/index.php" class="nav-link px-3 active">
+              <a href="../adminDashboard/index.php" class="nav-link px-3 active">
                 <span class="me-2"><i class="bi bi-speedometer2"></i></span>
                 <span>Admin Dashboard</span>
               </a>
@@ -48,9 +48,9 @@
               </div>
             </li>
             <li>
-              <a href="my-workouts.php" class="nav-link px-3">
-                <span class="me-2"><i class="bi bi-book-fill"></i></span>
-                <span>My Workout Plans</span>
+              <a href="products.php" class="nav-link px-3">
+              <span class="me-2"><i class="bi bi-box-seam"></i></span>
+                <span>Products</span>
               </a>
             </li>
             
