@@ -4,28 +4,7 @@
     <div class="footer-p-1">
       <div class="container">
         <div class="row">
-          <div class="footer-first">
-            <div class="footer-logo">
-              <a href="index.html">
-                <img src="assets/images/logo-2.svg" alt="Footer Logo">
-              </a>
-            </div>
-            <div class="contact-info d-flex-all">
-              <div class="images d-flex-all justify-content-start">
-                <figure>
-                  <img src="assets/images/blog-author-img.jpg" alt="Contact Images">
-                </figure>
-                <figure>
-                  <img src="assets/images/blog-author-img-2.jpg" alt="Contact Images">
-                </figure>
-                <figure>
-                  <img src="assets/images/blog-author-img-3.jpg" alt="Contact Images">
-                </figure>
-              </div>
-              <p>expert trainers <span>+1 (251) 344 0 66</span> free call !</p>
-            </div>
-            <a href="contact.html" class="theme-btn">Get a Consultation </a>
-          </div>
+          
         </div>
       </div>
     </div>
@@ -48,19 +27,20 @@
             <div class="footer-col">
               <h3>Contact</h3>
               <ul>
-                <li>
-                   <i class="flaticon-maps"></i>
-                  <p>901 N Pitt Str., Suite 170, VA 22314, USA</p>
-                </li>
-                <li>
-                   <i class="flaticon-iphone"></i>
-                  <p><a href="callto:(+380)503184707">(+380) 50 318 47 07</a></p>
-                </li>
-                <li>
-                   <i class="flaticon-mail"></i>
-                  <p><a href="mailto:username@domain.com">username@domain.com</a></p>
-                </li>
-              </ul>
+  <li>
+    <i class="flaticon-maps"></i>
+    <p>123 Galle Road, Colombo 03, Sri Lanka</p>
+  </li>
+  <li>
+    <i class="flaticon-iphone"></i>
+    <p><a href="callto:+94771234567">(+94) 77 445 6677</a></p>
+  </li>
+  <li>
+    <i class="flaticon-mail"></i>
+    <p><a href="mailto:info@gymname.lk">info@bodyengineering.lk</a></p>
+  </li>
+</ul>
+
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-12">

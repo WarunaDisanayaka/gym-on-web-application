@@ -75,7 +75,7 @@
         <div class="row">
           <ul>
             <li>
-              <a href="index.html">
+              <a href="index.php">
                 <i class="fa-solid fa-house"></i>
                 <p>Home</p>
               </a>
@@ -100,14 +100,14 @@
               <figure>
                 <img src="assets/images/blog-img-1.jpg" alt="blog-img-1">
               </figure>
-              <a href="blog-detail.html">
+              <a href="blog-detail.php">
                 <i class="fa-solid fa-angles-right"></i>
               </a>
             </div>
             <div class="blog-data">
               <span class="blog-date">January 9, 2025</span>
               <h2>
-                <a href="blog-detail.html">What mistakes you are making while muscle building</a>
+                <a href="blog-detail.php">What mistakes you are making while muscle building</a>
               </h2>
               <div class="blog-author d-flex-all justify-content-start">
                 <div class="author-img">
@@ -128,14 +128,14 @@
               <figure>
                 <img src="assets/images/blog-img-2.jpg" alt="blog-img-2">
               </figure>
-              <a href="blog-detail.html">
+              <a href="blog-detail.php">
                 <i class="fa-solid fa-angles-right"></i>
               </a>
             </div>
             <div class="blog-data">
               <span class="blog-date">January 9, 2025</span>
               <h2>
-                <a href="blog-detail.html">HOW A GOOD PERSONAL TRAINER CAN CHANGE THE WAY OF YOUR LIFE</a>
+                <a href="blog-detail.php">HOW A GOOD PERSONAL TRAINER CAN CHANGE THE WAY OF YOUR LIFE</a>
               </h2>
               <div class="blog-author d-flex-all justify-content-start">
                 <div class="author-img">
@@ -156,14 +156,14 @@
               <figure>
                 <img src="assets/images/blog-img-3.jpg" alt="blog-img-3">
               </figure>
-              <a href="blog-detail.html">
+              <a href="blog-detail.php">
                 <i class="fa-solid fa-angles-right"></i>
               </a>
             </div>
             <div class="blog-data">
               <span class="blog-date">January 9, 2025</span>
               <h2>
-                <a href="blog-detail.html">How To make cool physic in gym in 3 months</a>
+                <a href="blog-detail.php">How To make cool physic in gym in 3 months</a>
               </h2>
               <div class="blog-author d-flex-all justify-content-start">
                 <div class="author-img">
@@ -184,14 +184,14 @@
               <figure>
                 <img src="assets/images/blog-img-4.jpg" alt="blog-img-1">
               </figure>
-              <a href="blog-detail.html">
+              <a href="blog-detail.php">
                 <i class="fa-solid fa-angles-right"></i>
               </a>
             </div>
             <div class="blog-data">
               <span class="blog-date">January 9, 2025</span>
               <h2>
-                <a href="blog-detail.html">How gym cycling can help to have good metabolism</a>
+                <a href="blog-detail.php">How gym cycling can help to have good metabolism</a>
               </h2>
               <div class="blog-author d-flex-all justify-content-start">
                 <div class="author-img">
@@ -212,14 +212,14 @@
               <figure>
                 <img src="assets/images/blog-img-5.jpg" alt="blog-img-2">
               </figure>
-              <a href="blog-detail.html">
+              <a href="blog-detail.php">
                 <i class="fa-solid fa-angles-right"></i>
               </a>
             </div>
             <div class="blog-data">
               <span class="blog-date">January 9, 2025</span>
               <h2>
-                <a href="blog-detail.html">Differently to build bigger and better</a>
+                <a href="blog-detail.php">Differently to build bigger and better</a>
               </h2>
               <div class="blog-author d-flex-all justify-content-start">
                 <div class="author-img">
@@ -240,14 +240,14 @@
               <figure>
                 <img src="assets/images/blog-img-6.jpg" alt="blog-img-3">
               </figure>
-              <a href="blog-detail.html">
+              <a href="blog-detail.php">
                 <i class="fa-solid fa-angles-right"></i>
               </a>
             </div>
             <div class="blog-data">
               <span class="blog-date">January 9, 2025</span>
               <h2>
-                <a href="blog-detail.html">Differently to build bigger and better</a>
+                <a href="blog-detail.php">Differently to build bigger and better</a>
               </h2>
               <div class="blog-author d-flex-all justify-content-start">
                 <div class="author-img">
