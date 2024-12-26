@@ -151,7 +151,10 @@ if (isset($_GET['id'])) {
               <li class="pd-sale-price"><span>Rs</span><?php echo $product['price']; ?></li>
             </ul>
             <p class="free-ship">Free Shipping On This Item</p>
-            <a href="javascript:void(0)" class="theme-btn">Add to Cart </a>
+            <a href="javascript:void(0)" class="theme-btn add-to-cart-btn" data-product-id="<?php echo $product['id']; ?>" 
+    data-title="<?php echo htmlspecialchars($product['product_name']); ?>"
+    data-price="<?php echo $product['price']; ?>"
+    data-image="<?php echo './adminDashboard/' . $product['image_path']; ?>">Add to Cart</a>
             <div class="pd-cat-tags">
               <ul>
                 <li>
@@ -181,8 +184,7 @@ if (isset($_GET['id'])) {
           <div class="pd-details">
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Description</button>
-                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Additional Information</button>
-                <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Reviews</button>
+                
               </div>
             <div class="more d-flex align-items-start">
                <div class="tab-content" id="v-pills-tabContent">
@@ -198,168 +200,8 @@ if (isset($_GET['id'])) {
                     
                   </div>
                 </div>
-                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                  <div class="adis-tab">
-                    <h3>Features & Benefits</h3>
-                    <ul class="include">
-                      <li><i class="fa-solid fa-check"></i> 30-Minute Fitness Consultation</li>
-                      <li><i class="fa-solid fa-check"></i> Guest Passes & Bottled Water</li>
-                      <li><i class="fa-solid fa-check"></i> Club 360 Class Facility</li>
-                      <li><i class="fa-solid fa-check"></i> Some of the most successful facilities</li>
-                      <li><i class="fa-solid fa-check"></i> State of the Art Equipment</li>
-                    </ul>
-                    <h3>Additional Information</h3>
-                    <div class="tab-table">
-                      <table class="table">
-                        <tbody>
-                          <tr>
-                            <td>Colour</td>
-                            <td>Mid-Grey</td>
-                            
-                          </tr>
-                          <tr>
-                            <td>Size</td>
-                            <td>400ml</td>
-                            
-                          </tr>
-                          <tr>
-                            <td>Brand</td>
-                            <td>Fosroc</td>
-                          </tr>
-                          <tr>
-                            <td>MPN</td>
-                            <td>FEX9540</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                  <div class="row">
-                    <div class="col-lg-7">
-                      <div class="rev-tab">
-                    <h3>Reviews</h3>
-                    <div class="total-reviews d-flex-all justify-content-between">
-                      <div class="t-r d-flex-all">
-                        5.0 Rating
-                      </div>
-                      <div class="f-r d-flex-all">
-                        <span>( 158 Reviews )</span>
-                        <div class="r-s">
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="review comments">
-                      <ul>
-                        <li>
-                          <div class="comment">
-                            <div class="c-img">
-                              <figure>
-                                <img src="assets/images/comment-img-3.jpg" alt="Comment Image One">
-                              </figure>
-                            </div>
-                            <div class="c-data">
-                              <h4>Jonathom Doe</h4>
-                              <span>July 31, 2024</span>
-                              <p>Delivered ye sportsmen zealously arranging frankness estimable as. Nay any article enabled musical shyness yet sixteen.</p>
-                              <div class="c-r-btn">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="comment">
-                            <div class="c-img">
-                              <figure>
-                                <img src="assets/images/comment-img-4.jpg" alt="Comment Image One">
-                              </figure>
-                            </div>
-                            <div class="c-data">
-                              <h4>Jonathom Doe</h4>
-                              <span>July 31, 2024</span>
-                              <p>Delivered ye sportsmen zealously arranging frankness estimable as. Nay any article enabled musical shyness yet sixteen.</p>
-                              <div class="c-r-btn">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="comment">
-                            <div class="c-img">
-                              <figure>
-                                <img src="assets/images/comment-img-1.jpg" alt="Comment Image One">
-                              </figure>
-                            </div>
-                            <div class="c-data">
-                              <h4>Jonathom Doe</h4>
-                              <span>July 31, 2024</span>
-                              <p>Delivered ye sportsmen zealously arranging frankness estimable as. Nay any article enabled musical shyness yet sixteen.</p>
-                              <div class="c-r-btn">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                      <a class="load-more" href="javascript:void(0)">Load More</a>
-                    </div>
-                    
-                  </div>
-                    </div>
-                    <div class="col-lg-5">
-                      <div class="rev-tab">
-                        <div class="post-review shape">
-                        <h3>Post Review</h3>
-                        <div class="select-rating d-flex-all justify-content-start">
-                          <span>Select Rating</span>
-                          <div class="p-r-s">
-                            <img src="assets/images/star.svg" alt="Star Svg">
-                            <img src="assets/images/star.svg" alt="Star Svg">
-                            <img src="assets/images/star.svg" alt="Star Svg">
-                            <img src="assets/images/star.svg" alt="Star Svg">
-                            <img src="assets/images/star.svg" alt="Star Svg">
-                          </div>
-                        </div>
-                        <div class="form">
-                          <form>
-                            <textarea placeholder="Review"></textarea>
-                            <div class="row">
-                              <div class="form-group col-md-6">
-                                <input type="text" name="text" placeholder="Complete Name">
-                              </div>
-                              <div class="form-group col-md-6">
-                                <input type="email" name="email" placeholder="Email Address">
-                              </div>
-                            </div>
-                            <button type="submit" class="theme-btn">Submit Review </button>
-                          </form>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                </div>
+                
+                
               </div>
             </div>
           </div>
@@ -452,6 +294,33 @@ if (isset($_GET['id'])) {
   <!-- Custom Js -->
 
   <script src="assets/js/custom.js"></script>
+  <script>
+  document.querySelectorAll('.add-to-cart-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // Get product data from the button's data attributes
+      const title = btn.getAttribute('data-title');
+      const price = btn.getAttribute('data-price');
+      const image = btn.getAttribute('data-image');
+
+      // Create an object for the product
+      const cartItem = {
+        title,
+        price,
+        image,
+      };
+
+      // Retrieve cart from localStorage or initialize an empty array
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push(cartItem); // Add new item to the cart
+      localStorage.setItem('cart', JSON.stringify(cart)); // Save cart back to localStorage
+
+      // Alert the user that the item was added to the cart
+      alert(`${title} added to cart!`);
+    });
+  });
+</script>
 </body>
 
 
