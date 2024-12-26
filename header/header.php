@@ -40,7 +40,6 @@ if ($current_page === 'checkout.php') {
                       <li class="menu-item-has-children"><a href="JavaScript:void(0)">Shop</a>
                         <ul class="sub-menu"> 
                           <li> <a href="product.php">Our Products</a></li>
-                          <li><a href="product-detail.php">Product Details</a></li>
                           <li><a href="cart.php">Shop Cart</a></li>
                           <li><a href="checkout.php">Cart Checkout</a></li>
                         </ul>
