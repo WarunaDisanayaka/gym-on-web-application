@@ -170,6 +170,7 @@ $price = $_GET['price'] ?? '0';
                 <span>Subtotal:</span>
                 <span id="amount">$<?php echo htmlspecialchars($price); ?></span>
                 <input type="hidden" name="amount" value="<?php echo htmlspecialchars($price); ?>">
+                <input type="hidden" name="package" value="<?php echo htmlspecialchars($package); ?>">
 
             </li>
                     </ul>
