@@ -66,6 +66,12 @@
                 <span>Progress</span>
               </a>
             </li>
+            <li>
+              <a href="my-purchases.php" class="nav-link px-3">
+              <span class="me-2"><i class="bi bi-hourglass-split"></i></span>
+                <span>My Purchases</span>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
