@@ -79,7 +79,7 @@ if ($current_page === 'checkout.php') {
                         </ul>
                       </li>
                       <li>
-                        <a href="contact.php">Contact</a>
+                        <a href="contact.php">Reviews</a>
                       </li>
                       <li>
                         <a href="services.php">Work Out Plans</a>

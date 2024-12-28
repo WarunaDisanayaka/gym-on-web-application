@@ -34,6 +34,13 @@
     <span>Orders</span>
   </a>
 </li>
+<li>
+  <a href="reviews.php" class="nav-link px-3">
+    <span class="me-2"><i class="bi bi-chat-dots"></i></span>
+    <span>Reviews</span>
+  </a>
+</li>
+
 
             
             
