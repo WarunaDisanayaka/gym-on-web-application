@@ -57,7 +57,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link rel="stylesheet" type="text/css" href="assets/css/style-dark.css"> 
    <!-- Responsive -->
   <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
- 
+ <style>
+  
+ </style>
 </head>
  
 <body class="light-d">
@@ -95,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="container">
       <div class="row">
         <div class="banner-details">
-          <h2>Contact Us</h2>
+          <h2>Rate Us</h2>
           <p>our values and vaulted us to the top of our industry.</p>
         </div>
       </div>
@@ -111,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               </a>
             </li>
             <li class="current">
-              <p>Contact Us</p>
+              <p>Rate Us</p>
             </li>
           </ul>
         </div>
@@ -126,14 +128,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <figure>
         <img src="assets/images/heading-icon.png" alt="Heading Icon">
       </figure>
-      <span>Frequently asked question</span>
-      <h2>Hello Guys Have Question? FEEL FREE TO ASK US ANYTHING</h2>
+      <span>Customer Reviews</span>
+<h2>Share Your Experience! WE VALUE YOUR FEEDBACK</h2>
+
     </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-7" >
           <div class="data">
-           <p>Have questions or want to chat? Fill out our contact form, and we’ll put you in touch with the right people.</p>
+          <p>Want to leave a review or share your experience? Fill out our review form, and we’ll make sure your feedback reaches us!</p>
             <form class="content-form" id="contact-form" method="post" action="contact.php">
                <div class="row g-0">
                 <input type="text" name="CompleteName" placeholder="Complete Name" required="">
