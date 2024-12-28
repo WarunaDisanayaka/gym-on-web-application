@@ -51,7 +51,7 @@ if (!isset($_SESSION['user_id'])) {
               </button>
             </div> -->
           </form>
-          <ul class="navbar-nav">
+          <<ul class="navbar-nav">
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle ms-2"
@@ -63,7 +63,7 @@ if (!isset($_SESSION['user_id'])) {
                 <i class="bi bi-person-fill"></i>
               </a>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">Logout</a></li>
+                <li><a class="dropdown-item" href="../functions/auth/logout.php">Logout</a></li>
                 
               </ul>
             </li>

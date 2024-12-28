@@ -1,45 +1,72 @@
+<?php
+session_start();
+
+// Get the current page
+$current_page = basename($_SERVER['PHP_SELF']);
+
+// Check if the current page is checkout.php
+if ($current_page === 'product-checkout.php') {
+   // Verify if the user is logged in
+   if (!isset($_SESSION['user_id'])) {
+      // If not logged in, redirect to the login page
+      header("Location: login.php");
+      exit();
+   }
+}
+
+?>
 <script>
    document.addEventListener("DOMContentLoaded", () => {
-       // Retrieving cart items from local storage
-       const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-   
-       // Selecting the Cart Items container
-       const cartItemsContainer = document.querySelector(".cart-total-box .final ul");
-       const subtotalElement = document.querySelector("#amount"); // Subtotal display element
-   
-       let subtotal = 0; // Initialize subtotal
-   
-       // Check if the container exists
-       if (cartItemsContainer) {
-           if (cartItems.length > 0) {
-               // Dynamically add cart items to the container
-               cartItems.forEach(item => {
-                   const listItem = document.createElement("li");
-                   listItem.innerHTML = `
-                       <span>${item.title}:</span> 
-                       <span>${item.price}</span>`;
-                   cartItemsContainer.appendChild(listItem);
-   
-                   // Parse and add item price to subtotal (removing non-numeric characters)
-                   subtotal += parseFloat(item.price.replace(/[^0-9.-]+/g, ""));
-               });
-   
-               // Update the subtotal element with the calculated total
-               subtotalElement.textContent = `RS ${subtotal.toFixed(2)}`;
-           } else {
-               // Show "No items in the cart" message if the cart is empty
-               cartItemsContainer.innerHTML = "<li><span>No items in the cart.</span></li>";
-           }
-       } else {
-           console.error("Cart Items container not found.");
-       }
-   
-       // Update the hidden input with the subtotal value
-       const hiddenAmountInput = document.querySelector('input[name="amount"]');
-       if (hiddenAmountInput) {
-           hiddenAmountInput.value = subtotal.toFixed(2);
-       }
-   });
+    // Retrieving cart items from local storage
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Selecting the Cart Items container and subtotal elements
+    const cartItemsContainer = document.querySelector(".cart-total-box .final ul");
+    const subtotalElement = document.querySelector("#amount"); // Subtotal display element
+    const hiddenTotalPriceInput = document.querySelector('input[name="total_price"]'); // Hidden input for total price
+
+    let subtotal = 0; // Initialize subtotal
+
+    // Check if the container exists
+    if (cartItemsContainer) {
+        if (cartItems.length > 0) {
+            // Dynamically add cart items to the container
+            cartItems.forEach(item => {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `
+                    <span>${item.title}:</span> 
+                    <span>${item.price}</span>`;
+                cartItemsContainer.appendChild(listItem);
+
+                // Parse and add item price to subtotal (removing non-numeric characters)
+                subtotal += parseFloat(item.price.replace(/[^0-9.-]+/g, ""));
+            });
+
+            // Update the subtotal element with the calculated total
+            subtotalElement.textContent = `RS ${subtotal.toFixed(2)}`;
+        } else {
+            // Show "No items in the cart" message if the cart is empty
+            cartItemsContainer.innerHTML = "<li><span>No items in the cart.</span></li>";
+        }
+    } else {
+        console.error("Cart Items container not found.");
+    }
+
+    // Update the hidden input with the subtotal value
+    if (hiddenTotalPriceInput) {
+        hiddenTotalPriceInput.value = subtotal.toFixed(2);
+    }
+});
+
+   document.addEventListener("DOMContentLoaded", () => {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const hiddenItemsInput = document.getElementById("cart-items-json");
+
+    if (hiddenItemsInput) {
+        hiddenItemsInput.value = JSON.stringify(cartItems);
+    }
+});
+
 </script>
 <!DOCTYPE html>
 <html lang="en">
@@ -123,104 +150,89 @@
       <!-- Banner Style One End -->
       <!-- Cart Start -->
       <section class="gap checkout detail-page">
-         <form action="process-payment.php" method="POST" id="payment-form">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-12">
-                     <div class="row">
-                        <div class="col-lg-8 col-md-12">
-                           <div class="billing">
-                              <h3>Billing Address</h3>
-                              <div class="row">
-                                 <div class="col-md-12">
-                                    <input type="text" name="text" placeholder="Complete Name">
-                                 </div>
-                              </div>
-                              <div class="row">
-                                 <div class="col-md-12">
-                                    <input type="email" name="email" placeholder="Email Address">
-                                 </div>
-                              </div>
-                              <div class="row">
-                                 <div class="col-md-12">
-                                    <input type="text" name="text" placeholder="Company Name">
-                                 </div>
-                              </div>
-                              <div class="row dist">
-                                 <div class="col-md-6">
-                                    <input type="number" name="number" placeholder="Postal Code">
-                                 </div>
-                                 <div class="col-md-6">
-                                    <input type="number" name="number" placeholder="Phone No">
-                                 </div>
-                              </div>
-                              <div class="row">
-                                 <div class="col-md-12">
-                                    <input type="text" name="text" placeholder="Address">
-                                 </div>
-                              </div>
-                           </div>
+      <form action="checkout-process.php" method="POST" id="payment-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                        <div class="billing">
+                            <h3>Billing Address</h3>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" name="name" placeholder="Complete Name" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="email" name="email" placeholder="Email Address" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" name="company" placeholder="Company Name">
+                                </div>
+                            </div>
+                            <div class="row dist">
+                                <div class="col-md-6">
+                                    <input type="number" name="postal_code" placeholder="Postal Code" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="number" name="phone" placeholder="Phone No" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" name="address" placeholder="Address" required>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-md-12">
-                           <div class="order-note">
-                              <h3>Order Note</h3>
-                              <textarea placeholder="Order Note"></textarea>
-                           </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="order-note">
+                            <h3>Order Note</h3>
+                            <textarea name="order_note" placeholder="Order Note"></textarea>
                         </div>
-                     </div>
-                     <div class="row">
-                        <div class="cart-t-payment-m">
-                           <div class="cart-total-box">
-                              <div class="final">
-                                 <h4>Cart Items</h4>
-                                 <ul>
-                                 </ul>
-                              </div>
-                              <div class="total">
-                                 <ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cart-t-payment-m">
+                        <div class="cart-total-box">
+                            <div class="final">
+                                <h4>Cart Items</h4>
+                                <ul id="cart-items-list"></ul>
+                                <input type="hidden" name="items" id="cart-items-json">
+
+                            </div>
+                            <div class="total">
+                                <ul>
                                     <li>
-                                       <span>Subtotal:</span>
-                                       <span id="amount">Rs</span>
-                                       <input type="hidden" name="amount" value="<?php echo htmlspecialchars($price); ?>">
+                                        <span>Subtotal:</span>
+                                        <span id="amount">Rs</span>
+                                        <input type="hidden" name="total_price"> 
                                     </li>
-                                 </ul>
-                              </div>
-                           </div>
-                           <div class="payment-method">
-                              <h3>Payment Method</h3>
-                              <!-- <div class="row checkk g-0">
-                                 <div class="form-group col-md-12">
-                                   <div class="custom-control custom-radio">
-                                     <input checked type="checkbox" id="customRadio1" name="customRadio" class="custom-control-input">
-                                     <label class="custom-control-label" for="customRadio1">Bank Payment</label>
-                                   </div>
-                                 </div>
-                                 <div class="form-group col-md-12">
-                                   <div class="custom-control custom-radio">
-                                     <input type="checkbox" id="customRadio21" name="customRadio" class="custom-control-input">
-                                     <label class="custom-control-label" for="customRadio21">Check Payment</label>
-                                   </div>
-                                 </div>
-                                 <div class="form-group col-md-12">
-                                   <div class="custom-control custom-radio">
-                                     <input type="checkbox" id="customRadio22" name="customRadio" class="custom-control-input">
-                                     <label class="custom-control-label" for="customRadio22">PayPal
-                                         <img src="assets/images/cards.png" alt="Bank Cards">
-                                     </label>
-                                   </div>
-                                 </div>
-                                 </div> -->
-                              <div id="card-element">
-                                 <!-- A Stripe Element will be inserted here. -->
-                              </div>
-                              <button type="submit" class="theme-btn">Place Order</button>
-                           </div>
+                                </ul>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
+                        <div class="payment-method">
+                            <h3>Payment Method</h3>
+                            <div class="row checkk g-0">
+                                <div class="form-group col-md-12">
+                                    <div class="custom-control custom-radio">
+                                        <input checked type="checkbox" id="customRadio1" name="payment_method" value="Cash On Delivery" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio1">Cash On Delivery</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="theme-btn">Place Order</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </form>
+        </div>
+    </div>
+</form>
+
       </section>
       <!-- Cart End -->
       <!-- Footer Style One Start -->
@@ -269,71 +281,7 @@
       <!-- Footer Style One End -->
       <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
       <script src="https://js.stripe.com/v3/"></script>
-      <script>
-         // Create a Stripe client
-         var stripe = Stripe('pk_test_63t8nT9v0tVZoAnVDON58Btf'); // Replace with your Publishable Key
-         
-         // Create an instance of Elements
-         var elements = stripe.elements();
-         
-         // Custom styling for the card Element
-         var style = {
-           base: {
-               color: 'white', // Set text color to white
-               fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-               fontSize: '16px',
-               '::placeholder': {
-                   color: '#b3b3b3', // Placeholder text color
-               },
-           },
-           invalid: {
-               color: '#fa755a', // Text color for invalid inputs
-               iconColor: '#fa755a', // Icon color for invalid inputs
-           },
-         };
-         
-         // Create an instance of the card Element with the custom style
-         var card = elements.create('card', { style: style });
-         
-         // Add an instance of the card Element into the `card-element` <div>
-         card.mount('#card-element');
-         
-         // Handle real-time validation errors from the card Element
-         card.addEventListener('change', function (event) {
-           var displayError = document.getElementById('card-errors');
-           if (event.error) {
-               displayError.textContent = event.error.message;
-           } else {
-               displayError.textContent = '';
-           }
-         });
-         
-         // Handle form submission
-         var form = document.getElementById('payment-form');
-         form.addEventListener('submit', function (event) {
-           event.preventDefault();
-         
-           stripe.createToken(card).then(function (result) {
-               if (result.error) {
-                   // Inform the user if there was an error
-                   var errorElement = document.getElementById('card-errors');
-                   errorElement.textContent = result.error.message;
-               } else {
-                   // Send the token to your server
-                   var hiddenInput = document.createElement('input');
-                   hiddenInput.setAttribute('type', 'hidden');
-                   hiddenInput.setAttribute('name', 'stripeToken');
-                   hiddenInput.setAttribute('value', result.token.id);
-                   form.appendChild(hiddenInput);
-         
-                   // Submit the form
-                   form.submit();
-               }
-           });
-         });
-         
-         
-      </script>
+      
       <!-- Jquery -->
       <script src="assets/js/jquery.min.js"></script>
       <!-- Waypoint -->
