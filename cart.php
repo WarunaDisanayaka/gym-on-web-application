@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-
 <!-- Mirrored from winsfolio.net/html/gymon/gym-on-drak/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Nov 2024 11:19:32 GMT -->
 <head>
-
   <!-- Meta Options -->
    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Title -->
    <title>Cart</title>
   <!-- Bootstrap -->
-
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
   <link rel="icon" type="image/x-icon" href="assets/images/heading-icon.png">
   <link rel="stylesheet" href="assets/font/flaticon_mycollection.css">
@@ -26,9 +22,8 @@
   <link rel="stylesheet" type="text/css" href="assets/css/style-dark.css"> 
   <!-- Responsive -->
   <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
- 
 </head>
- 
+
 <body class="light-d">
     <!-- Loader Start -->
     <div class="color-group"> 
@@ -122,7 +117,7 @@
           </div>
           <div class="update-cart d-flex-all justify-content-end">
            
-            <a href="contact.html" class="theme-btn">Go to Checkout </a>
+          <a href="product-checkout.php" class="theme-btn" onclick="goToCheckout()">Go to Checkout</a>
           </div>
         </div>
       </div>
@@ -355,6 +350,22 @@ console.log(cartItems);
   document.addEventListener('DOMContentLoaded', renderCartItems);
   const cartData = JSON.parse(localStorage.getItem('cart')) || [];
 console.log(cartData); // Check if the data is fetched correctly
+
+
+function goToCheckout() {
+  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+  if (cartItems.length === 0) {
+    alert('Your cart is empty!');
+    return false;
+  }
+
+  // Serialize cart items
+  const cartQuery = encodeURIComponent(JSON.stringify(cartItems));
+
+  // Redirect to the checkout page
+  window.location.href = `product-checkout.php?cart=${cartQuery}`;
+}
+
 
 </script>
 
