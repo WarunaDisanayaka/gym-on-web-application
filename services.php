@@ -86,7 +86,7 @@
                   <div class="service-data">
                      <i class="flaticon-gym-equipment"></i> 
                      <h3><a href="">Beginner</a></h3>
-                     <p class="price text-white">Price: $49/month</p>
+                     <p class="price text-white">Price: Rs 4500/month</p>
                      <p>
                         ✔ Personalized workout plans for beginners<br>
                         ✔ Access to cardio and basic weight equipment<br>
@@ -95,14 +95,14 @@
                         ✔ Weekly progress tracking and guidance<br>
                         ✔ Supportive community for motivation
                      </p>
-                     <a href="checkout.php?package=Beginner&price=49" class="theme-btn">Buy Now</a>
+                     <a href="checkout.php?package=Beginner&price=4500" class="theme-btn">Buy Now</a>
                   </div>
                </div>
                <div class="col-lg-4 col-md-6" >
                   <div class="service-data">
                      <i class="flaticon-gym"></i>
                      <h3><a href="service-detail.php">Intermediate</a></h3>
-                     <p class="price text-white">Price: $69/month</p>
+                     <p class="price text-white">Price: Rs 6500/month</p>
                      <p>
                         ✔ Advanced workout routines for strength and endurance<br>
                         ✔ Access to free weights and advanced machines<br>
@@ -111,14 +111,14 @@
                         ✔ Monthly progress tracking and performance analysis<br>
                         ✔ Priority access to fitness workshops and classes
                      </p>
-                     <a href="checkout.php?package=Intermediate&price=69" class="theme-btn">Buy Now</a>
+                     <a href="checkout.php?package=Intermediate&price=6500" class="theme-btn">Buy Now</a>
                   </div>
                </div>
                <div class="col-lg-4 col-md-6" >
                   <div class="service-data mb-0">
                      <i class="flaticon-work-from-home"></i>
                      <h3><a href="service-detail.php">Expert</a></h3>
-                     <p class="price text-white">Price: $99/month</p>
+                     <p class="price text-white">Price: Rs 9500/month</p>
                      <p>
                         ✔ Elite training programs tailored for professionals<br>
                         ✔ Access to advanced equipment and specialized zones<br>
@@ -127,7 +127,7 @@
                         ✔ Detailed progress reports with performance metrics<br>
                         ✔ Exclusive access to VIP fitness events and seminars
                      </p>
-                     <a href="checkout.php?package=Expert&price=99" class="theme-btn">Buy Now</a>
+                     <a href="checkout.php?package=Expert&price=9500" class="theme-btn">Buy Now</a>
                   </div>
                </div>
             </div>
