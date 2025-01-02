@@ -42,7 +42,9 @@ try {
         $stmt = $conn->prepare("INSERT INTO purchase_items (purchase_id, item_name, item_price) VALUES (?, ?, ?)");
         foreach ($items as $item) {
             $itemName = htmlspecialchars($item['title'], ENT_QUOTES, 'UTF-8');
-            $itemPrice = floatval($item['price']);
+            $rawPrice = $item['price'];
+            $itemPrice = floatval(preg_replace('/[^\d.]/', '', $rawPrice));
+
             $stmt->bind_param("isd", $purchaseId, $itemName, $itemPrice);
 
             if (!$stmt->execute()) {
@@ -79,7 +81,7 @@ try {
     $message .= "<h3>Purchased Items:</h3>";
     $message .= "<ul>";
     foreach ($items as $item) {
-        $message .= "<li>{$item['title']} - Rs{$item['price']}</li>";
+        $message .= "<li>{$item['title']} - {$item['price']}</li>";
     }
     $message .= "</ul>";
     $message .= "<h3>Total Price: Rs $totalPrice</h3>";

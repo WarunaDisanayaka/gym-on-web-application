@@ -6,12 +6,12 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 // Check if the current page is checkout.php
 if ($current_page === 'product-checkout.php') {
-   // Verify if the user is logged in
-   if (!isset($_SESSION['user_id'])) {
-      // If not logged in, redirect to the login page
-      header("Location: login.php");
-      exit();
-   }
+    // Verify if the user is logged in
+    if (!isset($_SESSION['user_id'])) {
+        // If not logged in, redirect to the login page
+        header("Location: login.php");
+        exit();
+    }
 }
 
 ?>
@@ -43,7 +43,7 @@ if ($current_page === 'product-checkout.php') {
             });
 
             // Update the subtotal element with the calculated total
-            subtotalElement.textContent = `RS ${subtotal.toFixed(2)}`;
+            subtotalElement.textContent = `${subtotal.toFixed(2)}`;
         } else {
             // Show "No items in the cart" message if the cart is empty
             cartItemsContainer.innerHTML = "<li><span>No items in the cart.</span></li>";
